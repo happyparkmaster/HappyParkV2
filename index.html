@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Park</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Mulish', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Arima Madurai', cursive;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        .menu-item {
+            opacity: 0;
+            animation: slideUp 0.5s ease-out forwards;
+        }
+        .skill-bar {
+            transition: width 1s ease-out;
+        }
+        section {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-orange-700 to-orange-900 min-h-screen text-white">
+    <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold">Happy Park</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.1s;">Sobre mí</a>
+                    <a href="#skills" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.2s;">Habilidades</a>
+                    <a href="#projects" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.3s;">Proyectos</a>
+                    <a href="#contact" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.4s;">Contacto</a>
+                </div>
+                <button id="menuToggle" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg">
+            <a href="#about" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Sobre mí</a>
+            <a href="#skills" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Habilidades</a>
+            <a href="#projects" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Proyectos</a>
+            <a href="#contact" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Contacto</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 pt-24">
+        <section id="about" class="mb-20 animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Lorem Ipsum Dolor Sit Amet</h1>
+                    <p class="text-xl mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#contact" class="bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition-colors duration-300">Contáctame</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
+            
+        </section>
+
+        <section id="projects" class="mb-20 animate-fade-in-up" style="animation-delay: 0.6s;">
+            <h2 class="text-3xl font-bold mb-8">Proyectos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Lorem Ipsum Dolor</h3>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="text-orange-300 hover:text-orange-100 transition-colors duration-300">Ver Proyecto →</a>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Consectetur Adipiscing</h3>
+                    <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.</p>
+                    <a href="#" class="text-orange-300 hover:text-orange-100 transition-colors duration-300">Ver Proyecto →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="animate-fade-in-up" style="animation-delay: 0.8s;">
+            <h2 class="text-3xl font-bold mb-8">Contacto</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block mb-2">Nombre</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 focus:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300" required>
+                </div>
+                <div>
+                    <label for="email" class="block mb-2">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 focus:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300" required>
+                </div>
+                <div>
+                    <label for="message" class="block mb-2">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 focus:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300" required></textarea>
+                </div>
+                <button type="submit" class="bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition-colors duration-300">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg mt-12">
+        <div class="container mx-auto px-6 py-12">
+            <div class="bg-gray-800 bg-opacity-50 rounded-lg p-8 mb-8 text-center">
+                <h3 class="text-2xl font-bold mb-2">¡No te pierdas ninguna novedad!</h3>
+                <p class="text-gray-300 mb-6">Suscribete y recibe ofertas exclusivas, información de eventos y sorpresas.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+                    <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 rounded-lg bg-gray-700 bg-opacity-50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300 whitespace-nowrap">Suscribirse</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold">★</div>
+                        <h4 class="text-xl font-semibold">Happy Park</h4>
+                    </div>
+                    <p class="text-gray-300 mb-4">El parque de diversiones más emocionante de la región. Creando momentos mágicos desde 1995.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300" aria-label="Facebook">f</a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300" aria-label="Instagram">ig</a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300" aria-label="X">x</a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300" aria-label="YouTube">yt</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">El Parque</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-orange-300 transition-colors duration-300">Atracciones</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition-colors duration-300">Mapa del Parque</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition-colors duration-300">Shows y Eventos</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition-colors duration-300">Restaurantes</a></li>
+                        <li><a href="#" class="hover:text-orange-300 transition-colors duration-300">Tiendas</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 pt-6 border-t border-white border-opacity-10 text-sm text-gray-300 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Claudio Anibal Smith. Todos los derechos reservados.</p>
+                <p>Hecho con amor para la diversión.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Alternar menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+        
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            
+            if (isHidden) {
+                // Animar items cuando se abre el menú
+                mobileMenuItems.forEach((item, index) => {
+                    item.style.animation = 'none';
+                    setTimeout(() => {
+                        item.style.animation = `slideUp 0.5s ease-out forwards`;
+                        item.style.animationDelay = `${index * 0.1}s`;
+                    }, 10);
+                });
+            }
+        });
+
+        // Desplazamiento suave para enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animar barras de habilidades al hacer scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const targetWidth = bar.parentElement.previousElementSibling.lastElementChild.textContent;
+                bar.style.width = targetWidth;
+            });
+        }
+
+        // Activar animación de barras cuando la sección de habilidades esté visible
+        const skillsSection = document.getElementById('skills');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateSkillBars();
+                observer.unobserve(skillsSection);
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(skillsSection);
+
+        // Envío del formulario (reemplaza con tu propia lógica)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Formulario enviado! (Reemplaza esto con tu propia lógica)');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
