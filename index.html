@@ -11,6 +11,28 @@
     <style>
         body {
             font-family: 'Mulish', sans-serif;
+            background: linear-gradient(135deg, #E8F4F8 0%, #D4F1E8 25%, #F0E8F4 50%, #F4F0E8 75%, #E8F0F4 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(173, 216, 230, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(144, 238, 144, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 40%, rgba(255, 228, 181, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        main, header {
+            position: relative;
+            z-index: 1;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Arima Madurai', cursive;
@@ -29,6 +51,50 @@
         .menu-item {
             opacity: 0;
             animation: slideUp 0.5s ease-out forwards;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .menu-attractions {
+            color: #FF6B6B;
+        }
+        .menu-attractions:hover {
+            color: #FF5252;
+        }
+        .menu-games {
+            color: #95B8A1;
+        }
+        .menu-games:hover {
+            color: #7FA392;
+        }
+        .menu-activities {
+            color: #FFB74D;
+        }
+        .menu-activities:hover {
+            color: #FFA726;
+        }
+        .menu-facilities {
+            color: #E91E8C;
+        }
+        .menu-facilities:hover {
+            color: #C71B7A;
+        }
+        .menu-services {
+            color: #1E90FF;
+        }
+        .menu-services:hover {
+            color: #1873CC;
+        }
+        .menu-prices {
+            color: #FF6B6B;
+        }
+        .menu-prices:hover {
+            color: #FF5252;
+        }
+        .menu-contact {
+            color: #95B8A1;
+        }
+        .menu-contact:hover {
+            color: #7FA392;
         }
         .skill-bar {
             transition: width 1s ease-out;
@@ -38,59 +104,226 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-r from-orange-700 to-orange-900 min-h-screen text-white">
-    <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg z-50">
-        <nav class="container mx-auto px-6 py-4">
+<body class="text-gray-800">
+    <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg z-50">
+        <nav class="container mx-auto px-2 py-0">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold">Happy Park</a>
+                <a href="#" class="flex items-center">
+                    <img src="images/happy_park_logo.png" alt="Happy Park Logo" class="h-24 w-auto">
+                </a>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#about" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.1s;">Sobre mí</a>
-                    <a href="#skills" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.2s;">Habilidades</a>
-                    <a href="#projects" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.3s;">Proyectos</a>
-                    <a href="#contact" class="menu-item hover:text-orange-300 transition-colors duration-300" style="animation-delay: 0.4s;">Contacto</a>
+                    <a href="#attractions" class="menu-item menu-attractions transition-colors duration-300" style="animation-delay: 0.1s;">Atracciones</a>
+                    <a href="#games" class="menu-item menu-games transition-colors duration-300" style="animation-delay: 0.2s;">Juegos</a>
+                    <a href="#activities" class="menu-item menu-activities transition-colors duration-300" style="animation-delay: 0.3s;">Actividades</a>
+                    <a href="#facilities" class="menu-item menu-facilities transition-colors duration-300" style="animation-delay: 0.4s;">Instalaciones</a>
+                    <a href="#services" class="menu-item menu-services transition-colors duration-300" style="animation-delay: 0.5s;">Servicios</a>
+                    <a href="#prices" class="menu-item menu-prices transition-colors duration-300" style="animation-delay: 0.6s;">Precios</a>
+                    <a href="#contact" class="menu-item menu-contact transition-colors duration-300" style="animation-delay: 0.7s;">Contacto</a>
                 </div>
-                <button id="menuToggle" class="md:hidden focus:outline-none">
+                <button id="menuToggle" class="md:hidden focus:outline-none text-gray-800">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </nav>
-        <div id="mobileMenu" class="md:hidden hidden bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg">
-            <a href="#about" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Sobre mí</a>
-            <a href="#skills" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Habilidades</a>
-            <a href="#projects" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Proyectos</a>
-            <a href="#contact" class="mobile-menu-item block py-2 px-4 text-sm hover:bg-white hover:bg-opacity-20 transition-colors duration-300">Contacto</a>
+        <div id="mobileMenu" class="md:hidden hidden bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg">
+            <a href="#attractions" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Atracciones</a>
+            <a href="#games" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Juegos</a>
+            <a href="#activities" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors duration-300">Actividades</a>
+            <a href="#facilities" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors duration-300">Instalaciones</a>
+            <a href="#services" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-300">Servicios</a>
+            <a href="#prices" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Precios</a>
+            <a href="#contact" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Contacto</a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12 pt-24">
-        <section id="about" class="mb-20 animate-fade-in-up" style="animation-delay: 0.2s;">
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Lorem Ipsum Dolor Sit Amet</h1>
-                    <p class="text-xl mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#contact" class="bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition-colors duration-300">Contáctame</a>
+    <main class="container mx-auto px-6 py-12 pt-32">
+        <section id="home" class="mb-20 animate-fade-in-up" style="animation-delay: 0.2s;">
+            <!-- hero seciton -->
+<div class="relative w-full h-[320px]" id="home">
+    <div class="absolute inset-0 opacity-70">
+        <img src="https://image1.jdomni.in/banner/13062021/0A/52/CC/1AF5FC422867D96E06C4B7BD69_1623557926542.png" alt="Background Image" class="object-cover object-center w-full h-full" />
+
+    </div>
+    <div class="absolute inset-9 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-4 md:mb-0">
+            <h1 class="text-grey-700 font-medium text-4xl md:text-5xl leading-tight mb-2">Happy Park</h1>
+            <p class="font-regular text-xl mb-8 mt-4">Bienvenido a Happy Park, el parque de diversiones más emocionante de la región. Creando momentos mágicos desde 1995.</p>
+            <a href="#contact"
+                class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858]  transition duration-200">Contáctenos</a>
+                </div>
+            </div>
+        </div>
+         </section>
+
+        <section id="attractions" class="mb-20 animate-fade-in-up" style="animation-delay: 0.3s;">
+            <h2 class="text-3xl font-bold mb-8">Atracciones</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">La Montaña Rusa Extrema</h3>
+                    <p class="mb-4 text-gray-700">Vive la emoción de la velocidad con nuestra montaña rusa más desafiante. Giros de 360 grados y caídas vertiginosas te esperan.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">La Rueda Gigante</h3>
+                    <p class="mb-4 text-gray-700">Disfruta de vistas espectaculares desde 60 metros de altura. Una experiencia relajante pero emocionante para toda la familia.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">El Tiovivo Mágico</h3>
+                    <p class="mb-4 text-gray-700">Un clásico reinventado con tecnología moderna y efectos especiales que te transportarán a otro mundo.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Las Tazas Giratorias</h3>
+                    <p class="mb-4 text-gray-700">Diversión garantizada para los más pequeños y para los que son jóvenes de corazón. ¡A ver quién aguanta más!</p>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
-            
+        <section id="games" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
+            <h2 class="text-3xl font-bold mb-8">Juegos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Zona de Arcade</h3>
+                    <p class="mb-4 text-gray-700">Cientos de juegos arcade clásicos y modernos. Gana tickets y canjéalos por premios increíbles.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Juegos de Feria</h3>
+                    <p class="mb-4 text-gray-700">Prueba tu habilidad en nuestros clásicos juegos de feria. Gana premios de peluche y trofeos.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Realidad Virtual</h3>
+                    <p class="mb-4 text-gray-700">Experimenta aventuras inmersivas en nuestros espacios de realidad virtual de última generación.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Simuladores</h3>
+                    <p class="mb-4 text-gray-700">Vuela un avión, conduce un auto de carreras o monta una moto en nuestros simuladores ultra realistas.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="projects" class="mb-20 animate-fade-in-up" style="animation-delay: 0.6s;">
-            <h2 class="text-3xl font-bold mb-8">Proyectos</h2>
+        <section id="activities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.5s;">
+            <h2 class="text-3xl font-bold mb-8">Actividades</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Lorem Ipsum Dolor</h3>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#" class="text-orange-300 hover:text-orange-100 transition-colors duration-300">Ver Proyecto →</a>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Shows en Vivo</h3>
+                    <p class="mb-4 text-gray-700">Disfruta de espectáculos de acrobacias, música y magia en varias etapas a lo largo del parque.</p>
                 </div>
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Consectetur Adipiscing</h3>
-                    <p class="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.</p>
-                    <a href="#" class="text-orange-300 hover:text-orange-100 transition-colors duration-300">Ver Proyecto →</a>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Eventos Especiales</h3>
+                    <p class="mb-4 text-gray-700">Celebra cumpleaños, eventos corporativos y reuniones con paquetes personalizados.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Escuelas de Verano</h3>
+                    <p class="mb-4 text-gray-700">Programas educativos y de entretenimiento para niños durante las vacaciones escolares.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tours Guiados</h3>
+                    <p class="mb-4 text-gray-700">Conoce la historia y secretos de Happy Park con nuestros tours guiados especiales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="facilities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.6s;">
+            <h2 class="text-3xl font-bold mb-8">Instalaciones</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Restaurantes</h3>
+                    <p class="mb-4 text-gray-700">Variedad de opciones gastronómicas desde comida rápida hasta restaurantes de alta cocina.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Cafeterías</h3>
+                    <p class="mb-4 text-gray-700">Refrescantes bebidas, postres deliciosos y snacks para mantener tu energía durante el día.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Baños y Vestuarios</h3>
+                    <p class="mb-4 text-gray-700">Instalaciones limpias y modernas distribuidas estratégicamente en todo el parque.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tiendas de Souvenirs</h3>
+                    <p class="mb-4 text-gray-700">Recuerdos y mercancía oficial de Happy Park para llevar a casa.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Área de Descanso</h3>
+                    <p class="mb-4 text-gray-700">Espacios cómodos y sombreados para descansar durante tu visita.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Estacionamientos</h3>
+                    <p class="mb-4 text-gray-700">Amplios estacionamientos con vigilancia 24 horas. Accesibles y seguros.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-20 animate-fade-in-up" style="animation-delay: 0.7s;">
+            <h2 class="text-3xl font-bold mb-8">Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Sillas de Ruedas</h3>
+                    <p class="mb-4 text-gray-700">Servicio de renta de sillas de ruedas para visitantes con movilidad reducida.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Primeros Auxilios</h3>
+                    <p class="mb-4 text-gray-700">Centro médico disponible con personal capacitado durante todo el horario de operación.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Depósito de Equipaje</h3>
+                    <p class="mb-4 text-gray-700">Guarda tus pertenencias de forma segura mientras disfrutas del parque.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">WiFi Gratuito</h3>
+                    <p class="mb-4 text-gray-700">Conectate a internet de forma segura en todo el parque sin costo adicional.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Fotografía Profesional</h3>
+                    <p class="mb-4 text-gray-700">Contrata a nuestros fotógrafos profesionales para capturar tus mejores momentos.</p>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Información y Mapas</h3>
+                    <p class="mb-4 text-gray-700">Obtén información de atracciones y mapas del parque en nuestros puntos de atención.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="prices" class="mb-20 animate-fade-in-up" style="animation-delay: 0.8s;">
+            <h2 class="text-3xl font-bold mb-8">Precios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Entrada Regular</h3>
+                    <p class="text-3xl font-bold mb-4 text-orange-500">$49.99</p>
+                    <ul class="space-y-2 mb-6 text-gray-700">
+                        <li>✓ Acceso a todas las atracciones</li>
+                        <li>✓ Parking incluido</li>
+                        <li>✓ WiFi gratuito</li>
+                    </ul>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Pase VIP</h3>
+                    <p class="text-3xl font-bold mb-4 text-orange-500">$99.99</p>
+                    <ul class="space-y-2 mb-6 text-gray-700">
+                        <li>✓ Todo incluido en Entrada Regular</li>
+                        <li>✓ Acceso prioritario sin colas</li>
+                        <li>✓ Área VIP exclusiva</li>
+                        <li>✓ Comida y bebida descuentada</li>
+                    </ul>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Pase Anual</h3>
+                    <p class="text-3xl font-bold mb-4 text-orange-500">$299.99</p>
+                    <ul class="space-y-2 mb-6 text-gray-700">
+                        <li>✓ Acceso ilimitado todo el año</li>
+                        <li>✓ Beneficios VIP incluidos</li>
+                        <li>✓ Descuentos en tiendas</li>
+                        <li>✓ Invitaciones a eventos especiales</li>
+                    </ul>
+                </div>
+                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Grupos (10+)</h3>
+                    <p class="text-3xl font-bold mb-4 text-orange-500">$39.99</p>
+                    <ul class="space-y-2 mb-6 text-gray-700">
+                        <li>✓ Por persona</li>
+                        <li>✓ Descuento de 20%</li>
+                        <li>✓ Coordinador de grupo</li>
+                        <li>✓ Área de pícnic reservada</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -115,7 +348,7 @@
         </section>
     </main>
 
-    <footer class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg mt-12">
+    <footer class="bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg mt-12">
         <div class="container mx-auto px-6 py-12">
             <div class="bg-gray-800 bg-opacity-50 rounded-lg p-8 mb-8 text-center">
                 <h3 class="text-2xl font-bold mb-2">¡No te pierdas ninguna novedad!</h3>
