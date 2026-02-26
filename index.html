@@ -269,21 +269,21 @@
                         description: "Plaza para niños con juegos y diversión asegurada",
                         buttonText: "Contactar ahora",
                         buttonUrl: "#",
-                        image: "http://127.0.0.1:5500/images/Atracciones/atracciones_plaza.jpg"
+                        image: "/images/Atracciones/atracciones_plaza.jpg"
                     },
                     {
                         title: "Pueblo Indígena",
                         description: "Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas.",
                         buttonText: "Pueblo Indígena",
                         buttonUrl: "#",
-                        image: "http://127.0.0.1:5500/images/Atracciones/atracciones_pueblo-indigena.jpg"
+                        image: "/images/Atracciones/atracciones_pueblo-indigena.jpg"
                     },
                     {
                         title: "Atracciones Soga",
                         description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
                         buttonText: "Atracciones Soga",
                         buttonUrl: "#",
-                        image: "http://127.0.0.1:5500/images/Atracciones/atracciones_soga.jpg"
+                        image: "/images/Atracciones/atracciones_soga.jpg"
                     }
                 ],
                 init() {
@@ -407,27 +407,27 @@
                 slides: [
                     { 
                         id: 1, 
-                        image: 'http://127.0.0.1:5500/images/Atracciones/jungla-1.jpg', 
-                        title: 'Jungla Encantada (Naturaleza)', 
+                        image: '/images/Atracciones/jungla-1.jpg', 
+                        title: 'Jungla Encantada', 
                         description: 'Es un lugar fascinante, con pura naturaleza donde los chicos disfrutan recorriendo sus curvos caminitos y puentecitos, sumergiéndose en un mundo lleno de fantasías y aventuras.' 
                     },
                     { 
                         id: 2, 
-                        image: 'https://picsum.photos/id/11/800/600', 
-                        title: 'Nature 2', 
-                        description: 'Nature second' 
+                        image: '/images/Atracciones/pueblo-2.jpg', 
+                        title: 'Pueblo Indígena', 
+                        description: 'Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas.' 
                     },
                     { 
                         id: 3, 
-                        image: 'https://picsum.photos/id/12/800/600', 
-                        title: 'Nature 3', 
-                        description: 'Nature 3th' 
+                        image: '/images/Atracciones/soga-1.jpg', 
+                        title: 'La Soga de Tarzán', 
+                        description: 'La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.' 
                     },
                     { 
                         id: 4, 
-                        image: 'https://picsum.photos/id/13/800/600', 
-                        title: 'Nature 4', 
-                        description: 'Nature last' 
+                        image: '/images/Atracciones/futbol-3.jpg', 
+                        title: 'Cancha de Fútbol', 
+                        description: 'Tanto varones como nenas se divierten jugando al Fútbol, Handball, Quemado y divertidos juegos de competencia por premios.' 
                     }
                 ],
                 init() {
@@ -539,151 +539,25 @@
 
         <section id="games" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
             <h2 class="text-3xl font-bold mb-8">Juegos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Zona de Arcade</h3>
-                    <p class="mb-4 text-gray-700">Cientos de juegos arcade clásicos y modernos. Gana tickets y canjéalos por premios increíbles.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Juegos de Feria</h3>
-                    <p class="mb-4 text-gray-700">Prueba tu habilidad en nuestros clásicos juegos de feria. Gana premios de peluche y trofeos.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Realidad Virtual</h3>
-                    <p class="mb-4 text-gray-700">Experimenta aventuras inmersivas en nuestros espacios de realidad virtual de última generación.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Simuladores</h3>
-                    <p class="mb-4 text-gray-700">Vuela un avión, conduce un auto de carreras o monta una moto en nuestros simuladores ultra realistas.</p>
-                </div>
-            </div>
         </section>
 
         <section id="activities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.5s;">
             <h2 class="text-3xl font-bold mb-8">Actividades</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Shows en Vivo</h3>
-                    <p class="mb-4 text-gray-700">Disfruta de espectáculos de acrobacias, música y magia en varias etapas a lo largo del parque.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Eventos Especiales</h3>
-                    <p class="mb-4 text-gray-700">Celebra cumpleaños, eventos corporativos y reuniones con paquetes personalizados.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Escuelas de Verano</h3>
-                    <p class="mb-4 text-gray-700">Programas educativos y de entretenimiento para niños durante las vacaciones escolares.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tours Guiados</h3>
-                    <p class="mb-4 text-gray-700">Conoce la historia y secretos de Happy Park con nuestros tours guiados especiales.</p>
-                </div>
-            </div>
+            
         </section>
 
         <section id="facilities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.6s;">
             <h2 class="text-3xl font-bold mb-8">Instalaciones</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Restaurantes</h3>
-                    <p class="mb-4 text-gray-700">Variedad de opciones gastronómicas desde comida rápida hasta restaurantes de alta cocina.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Cafeterías</h3>
-                    <p class="mb-4 text-gray-700">Refrescantes bebidas, postres deliciosos y snacks para mantener tu energía durante el día.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Baños y Vestuarios</h3>
-                    <p class="mb-4 text-gray-700">Instalaciones limpias y modernas distribuidas estratégicamente en todo el parque.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tiendas de Souvenirs</h3>
-                    <p class="mb-4 text-gray-700">Recuerdos y mercancía oficial de Happy Park para llevar a casa.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Área de Descanso</h3>
-                    <p class="mb-4 text-gray-700">Espacios cómodos y sombreados para descansar durante tu visita.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Estacionamientos</h3>
-                    <p class="mb-4 text-gray-700">Amplios estacionamientos con vigilancia 24 horas. Accesibles y seguros.</p>
-                </div>
-            </div>
+            
         </section>
 
         <section id="services" class="mb-20 animate-fade-in-up" style="animation-delay: 0.7s;">
             <h2 class="text-3xl font-bold mb-8">Servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Sillas de Ruedas</h3>
-                    <p class="mb-4 text-gray-700">Servicio de renta de sillas de ruedas para visitantes con movilidad reducida.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Primeros Auxilios</h3>
-                    <p class="mb-4 text-gray-700">Centro médico disponible con personal capacitado durante todo el horario de operación.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Depósito de Equipaje</h3>
-                    <p class="mb-4 text-gray-700">Guarda tus pertenencias de forma segura mientras disfrutas del parque.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">WiFi Gratuito</h3>
-                    <p class="mb-4 text-gray-700">Conectate a internet de forma segura en todo el parque sin costo adicional.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Fotografía Profesional</h3>
-                    <p class="mb-4 text-gray-700">Contrata a nuestros fotógrafos profesionales para capturar tus mejores momentos.</p>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Información y Mapas</h3>
-                    <p class="mb-4 text-gray-700">Obtén información de atracciones y mapas del parque en nuestros puntos de atención.</p>
-                </div>
-            </div>
         </section>
 
         <section id="prices" class="mb-20 animate-fade-in-up" style="animation-delay: 0.8s;">
             <h2 class="text-3xl font-bold mb-8">Precios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Entrada Regular</h3>
-                    <p class="text-3xl font-bold mb-4 text-orange-500">$49.99</p>
-                    <ul class="space-y-2 mb-6 text-gray-700">
-                        <li>✓ Acceso a todas las atracciones</li>
-                        <li>✓ Parking incluido</li>
-                        <li>✓ WiFi gratuito</li>
-                    </ul>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Pase VIP</h3>
-                    <p class="text-3xl font-bold mb-4 text-orange-500">$99.99</p>
-                    <ul class="space-y-2 mb-6 text-gray-700">
-                        <li>✓ Todo incluido en Entrada Regular</li>
-                        <li>✓ Acceso prioritario sin colas</li>
-                        <li>✓ Área VIP exclusiva</li>
-                        <li>✓ Comida y bebida descuentada</li>
-                    </ul>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Pase Anual</h3>
-                    <p class="text-3xl font-bold mb-4 text-orange-500">$299.99</p>
-                    <ul class="space-y-2 mb-6 text-gray-700">
-                        <li>✓ Acceso ilimitado todo el año</li>
-                        <li>✓ Beneficios VIP incluidos</li>
-                        <li>✓ Descuentos en tiendas</li>
-                        <li>✓ Invitaciones a eventos especiales</li>
-                    </ul>
-                </div>
-                <div class="bg-white border-4 border-orange-500 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Grupos (10+)</h3>
-                    <p class="text-3xl font-bold mb-4 text-orange-500">$39.99</p>
-                    <ul class="space-y-2 mb-6 text-gray-700">
-                        <li>✓ Por persona</li>
-                        <li>✓ Descuento de 20%</li>
-                        <li>✓ Coordinador de grupo</li>
-                        <li>✓ Área de pícnic reservada</li>
-                    </ul>
-                </div>
-            </div>
+            
         </section>
 
         <section id="contact" class="contact-section">
@@ -693,7 +567,7 @@
       <!-- Contact Info -->
       <div class="p-8 bg-green text-white">
         <h2 class="text-2xl text-white mb-8 relative pb-4">
-          Contact Information
+          Información de Contacto
           <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
         </h2>
         
@@ -703,23 +577,23 @@
             <i class="fas fa-map-marker-alt"></i>
           </div>
           <div>
-            <h3 class="text-lg mb-1">Our Location</h3>
+            <h3 class="text-lg mb-1">Ubicación</h3>
             <p class="text-gray-300 leading-relaxed">
-              Lucknow
+              Buenos Aires 1946, Olivos - a siete cuadras de la Quinta Presidencial -.
             </p>
           </div>
         </div>
         
         <!-- Phone Numbers -->
-        <div class="flex items-start gap-4 mb-8">
+        <div class="flex items-sBuenos Aires 1946, Olivos -a siete cuadras de la Quinta Presidencial-.tart gap-4 mb-8">
           <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
             <i class="fas fa-phone-alt"></i>
           </div>
           <div>
-            <h3 class="text-lg mb-1">Phone Numbers</h3>
+            <h3 class="text-lg mb-1">Teléfonos</h3>
             <p class="text-gray-300 leading-relaxed">
-              <a href="tel:+978589658" class="hover:text-blue-400">+91 748598658</a><br />
-              <a href="tel:+748596255" class="hover:text-blue-400">+91 789456123</a>
+              <a href="tel:+541147914639" class="hover:text-blue-400">+5411 4791-4639</a><br />
+              <a href="tel:+54111530225661" class="hover:text-blue-400">+5411 15 30225661</a>
             </p>
           </div>
         </div>
@@ -730,9 +604,9 @@
             <i class="fas fa-envelope"></i>
           </div>
           <div>
-            <h3 class="text-lg mb-1">Email Address</h3>
+            <h3 class="text-lg mb-1">Correo Electrónico</h3>
             <p class="text-gray-300 leading-relaxed">
-              <a href="mailto:kuldeepprajapati2111@gmail.com" class="hover:text-blue-400">kuldeepprajapati2111@gmail.com</a><br />
+              <a href="mailto:info@happypark.com.ar" class="hover:text-blue-400">info@happypark.com.ar</a><br />
              
             </p>
           </div>
@@ -757,42 +631,18 @@
       
       <!-- Contact Form -->
       <div class="p-8">
-        <h2 class="text-2xl mb-8 relative pb-4">
-          Send Us a Message
+        <h2 class="text-2xl font-bold mb-8 relative pb-4">
+          Ubicación en el Mapa
           <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
         </h2>
-        <form class="space-y-6">
-          <!-- Name -->
-          <div>
-            <label for="name" class="block mb-2 font-medium">Your Name</label>
-            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" required />
-          </div>
-          <!-- Email -->
-          <div>
-            <label for="email" class="block mb-2 font-medium">Email Address</label>
-            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" required />
-          </div>
-          <!-- Phone -->
-          <div>
-            <label for="phone" class="block mb-2 font-medium">Phone Number</label>
-            <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" />
-          </div>
-          <!-- Subject -->
-          <div>
-            <label for="subject" class="block mb-2 font-medium">Subject</label>
-            <input type="text" id="subject" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" />
-          </div>
-          <!-- Message -->
-          <div>
-            <label for="message" class="block mb-2 font-medium">Your Message</label>
-            <textarea id="message" class="w-full p-3 border border-gray-300 rounded-md min-h-[150px] resize-y focus:outline-none focus:ring-2 focus:ring-blue-300 transition" required></textarea>
-          </div>
-          
-          <!-- Submit Button -->
-          <button type="submit" class="flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-400 text-white font-semibold py-3 px-6 rounded-full hover:scale-105 hover:shadow-lg transition duration-300">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8192193484355!2d-58.4968676!3d-34.5215555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb130f39d902b%3A0x835ab45b7d750c63!2sHappy%20Park!5e0!3m2!1ses!2sar!4v1708876800000" 
+          width="100%" 
+          height="450" 
+          style="border:0; border-radius: 8px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </div>
