@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" type="img/x-icon" href="images/happypark.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -17,6 +20,7 @@
             background-attachment: fixed;
             min-height: 100vh;
         }
+
         body::before {
             content: '';
             position: fixed;
@@ -24,7 +28,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(173, 216, 230, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 20%, rgba(144, 238, 144, 0.1) 0%, transparent 50%),
@@ -32,81 +36,125 @@
             pointer-events: none;
             z-index: 0;
         }
-        main, header {
+
+        main,
+        header {
             position: relative;
             z-index: 1;
         }
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Arima Madurai', cursive;
         }
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .animate-fade-in-up {
             animation: fadeInUp 0.6s ease-out forwards;
         }
+
         .menu-item {
             opacity: 0;
             animation: slideUp 0.5s ease-out forwards;
             font-weight: 600;
             transition: all 0.3s ease;
         }
+
         .menu-home {
             color: #8E7CC3;
         }
+
         .menu-home:hover {
             color: #6F5FA8;
         }
+
         .menu-attractions {
             color: #FF6B6B;
         }
+
         .menu-attractions:hover {
             color: #FF5252;
         }
+
         .menu-games {
             color: #95B8A1;
         }
+
         .menu-games:hover {
             color: #7FA392;
         }
+
         .menu-activities {
             color: #FFB74D;
         }
+
         .menu-activities:hover {
             color: #FFA726;
         }
+
         .menu-facilities {
             color: #E91E8C;
         }
+
         .menu-facilities:hover {
             color: #C71B7A;
         }
+
         .menu-services {
             color: #1E90FF;
         }
+
         .menu-services:hover {
             color: #1873CC;
         }
+
         .menu-prices {
             color: #FF6B6B;
         }
+
         .menu-prices:hover {
             color: #FF5252;
         }
+
         .menu-contact {
             color: #95B8A1;
         }
+
         .menu-contact:hover {
             color: #7FA392;
         }
+
         .skill-bar {
             transition: width 1s ease-out;
         }
+
         section {
             scroll-margin-top: 100px;
         }
@@ -114,52 +162,73 @@
         .bg-attractions {
             background-color: #FF6B6B;
         }
+
         .bg-attractions:hover {
             background-color: #FF5252;
         }
+
         .bg-green {
             background-color: #95B8A1;
         }
+
         .bg-green:hover {
             background-color: #7FA392;
         }
-
-
     </style>
 </head>
+
 <body class="text-gray-800">
     <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg z-50">
         <nav class="container mx-auto px-2 py-0">
             <div class="flex justify-between items-center">
                 <a href="#home" class="flex items-center">
-                    <img src="images/logo_header.svg" alt="Happy Park Logo" class="h-20 w-auto object-contain mb-2 mt-2">
+                    <img src="images/logo_header.svg" alt="Happy Park Logo"
+                        class="h-20 w-auto object-contain mb-2 mt-2">
                 </a>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="menu-item menu-home transition-colors duration-300" style="animation-delay: 0.05s;">Inicio</a>
-                    <a href="#attractions" class="menu-item menu-attractions transition-colors duration-300" style="animation-delay: 0.1s;">Atracciones</a>
-                    <a href="#games" class="menu-item menu-games transition-colors duration-300" style="animation-delay: 0.2s;">Juegos</a>
-                    <a href="#activities" class="menu-item menu-activities transition-colors duration-300" style="animation-delay: 0.3s;">Actividades</a>
-                    <a href="#facilities" class="menu-item menu-facilities transition-colors duration-300" style="animation-delay: 0.4s;">Instalaciones</a>
-                    <a href="#services" class="menu-item menu-services transition-colors duration-300" style="animation-delay: 0.5s;">Servicios</a>
-                    <a href="#prices" class="menu-item menu-prices transition-colors duration-300" style="animation-delay: 0.6s;">Precios</a>
-                    <a href="#contact" class="menu-item menu-contact transition-colors duration-300" style="animation-delay: 0.7s;">Contacto</a>
+                    <a href="#home" class="menu-item menu-home transition-colors duration-300"
+                        style="animation-delay: 0.05s;">Inicio</a>
+                    <a href="#attractions" class="menu-item menu-attractions transition-colors duration-300"
+                        style="animation-delay: 0.1s;">Atracciones</a>
+                    <a href="#games" class="menu-item menu-games transition-colors duration-300"
+                        style="animation-delay: 0.2s;">Juegos</a>
+                    <a href="#activities" class="menu-item menu-activities transition-colors duration-300"
+                        style="animation-delay: 0.3s;">Actividades</a>
+                    <a href="#facilities" class="menu-item menu-facilities transition-colors duration-300"
+                        style="animation-delay: 0.4s;">Instalaciones</a>
+                    <a href="#services" class="menu-item menu-services transition-colors duration-300"
+                        style="animation-delay: 0.5s;">Servicios</a>
+                    <a href="#prices" class="menu-item menu-prices transition-colors duration-300"
+                        style="animation-delay: 0.6s;">Precios</a>
+                    <a href="#contact" class="menu-item menu-contact transition-colors duration-300"
+                        style="animation-delay: 0.7s;">Contacto</a>
                 </div>
                 <button id="menuToggle" class="md:hidden focus:outline-none text-gray-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </nav>
         <div id="mobileMenu" class="md:hidden hidden bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg">
-            <a href="#home" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-purple-500 hover:text-purple-600 transition-colors duration-300">Inicio</a>
-            <a href="#attractions" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Atracciones</a>
-            <a href="#games" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Juegos</a>
-            <a href="#activities" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors duration-300">Actividades</a>
-            <a href="#facilities" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors duration-300">Instalaciones</a>
-            <a href="#services" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-300">Servicios</a>
-            <a href="#prices" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Precios</a>
-            <a href="#contact" class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Contacto</a>
+            <a href="#home"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-purple-500 hover:text-purple-600 transition-colors duration-300">Inicio</a>
+            <a href="#attractions"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Atracciones</a>
+            <a href="#games"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Juegos</a>
+            <a href="#activities"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-yellow-600 hover:text-yellow-700 transition-colors duration-300">Actividades</a>
+            <a href="#facilities"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-pink-600 hover:text-pink-700 transition-colors duration-300">Instalaciones</a>
+            <a href="#services"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-300">Servicios</a>
+            <a href="#prices"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Precios</a>
+            <a href="#contact"
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Contacto</a>
         </div>
     </header>
 
@@ -167,225 +236,220 @@
         <section id="home" class="animate-fade-in-up" style="animation-delay: 0.2s;">
             <!--https://tailwindflex.com/@perky98/hero-slider-with-alpine-js-->
             <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .hero-slide {
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .slide-content {
-            transition: all 0.6s ease 0.3s;
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
-    <div x-data="heroSlider()" class="relative overflow-hidden">
-        <div class="relative h-[80vh] min-h-[500px]">
-            <template x-for="(slide, index) in slides" :key="index">
-                <div 
-                    x-show="currentSlide === index"
-                    x-transition.opacity.duration.800ms
-                    class="absolute inset-0"
-                >
-                    <div class="absolute inset-0 bg-gray-800">
-                        <img 
-                            :src="slide.image" 
-                            :alt="slide.title"
-                            class="w-full h-full object-cover object-[50%_15%] opacity-80"
-                            @error="replaceBrokenImage($event)"
-                            loading="lazy"
-                        >
-                    </div>
-                    
-                    <div class="container mx-auto px-6 h-full flex items-center">
-                        <div 
-                            class="max-w-2xl text-white slide-content"
-                            :class="{
+            <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+                .hero-slide {
+                    transition: opacity 0.8s ease, transform 0.8s ease;
+                }
+
+                .slide-content {
+                    transition: all 0.6s ease 0.3s;
+                }
+
+                .fade-in {
+                    animation: fadeIn 1s ease-in;
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+            </style>
+            <div x-data="heroSlider()" class="relative overflow-hidden">
+                <div class="relative h-[80vh] min-h-[500px]">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="currentSlide === index" x-transition.opacity.duration.800ms
+                            class="absolute inset-0">
+                            <div class="absolute inset-0 bg-gray-800">
+                                <img :src="slide.image" :alt="slide.title"
+                                    class="w-full h-full object-cover object-[50%_15%] opacity-80"
+                                    @error="replaceBrokenImage($event)" loading="lazy">
+                            </div>
+
+                            <div class="container mx-auto px-6 h-full flex items-center">
+                                <div class="max-w-2xl text-white slide-content" :class="{
                                 'translate-x-0 opacity-100': currentSlide === index,
                                 'translate-x-10 opacity-0': currentSlide !== index
-                            }"
-                        >
-                            <h2 x-text="slide.title" class="text-4xl md:text-5xl font-bold mb-4 hidden"></h2>
-                            <p x-text="slide.description" class="text-xl md:text-2xl mb-8 hidden"></p>
-                            <a 
-                                :href="slide.buttonUrl" 
-                                class="inline-block bg-attractions hover:bg-attractions-hover text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors fade-in hidden"
-                                x-text="slide.buttonText"
-                            ></a>
+                            }">
+                                    <h2 x-text="slide.title" class="text-4xl md:text-5xl font-bold mb-4 hidden"></h2>
+                                    <p x-text="slide.description" class="text-xl md:text-2xl mb-8 hidden"></p>
+                                    <a :href="slide.buttonUrl"
+                                        class="inline-block bg-attractions hover:bg-attractions-hover text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors fade-in hidden"
+                                        x-text="slide.buttonText"></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </template>
-            
-            <button 
-                @click="prev()" 
-                class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-10 transition-all"
-                aria-label="Previous slide"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button 
-                @click="next()" 
-                class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-10 transition-all"
-                aria-label="Next slide"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-            
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-                <template x-for="(slide, index) in slides" :key="index">
-                    <button
-                        @click="goTo(index)"
-                        class="w-2 h-2 md:w-3 md:h-3 rounded-full transition-all"
-                        :class="{
+                    </template>
+
+                    <button @click="prev()"
+                        class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-10 transition-all"
+                        aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button @click="next()"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-10 transition-all"
+                        aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:h-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <button @click="goTo(index)" class="w-2 h-2 md:w-3 md:h-3 rounded-full transition-all"
+                                :class="{
                             'bg-white w-4 md:w-6': currentSlide === index,
                             'bg-white/50': currentSlide !== index
-                        }"
-                        :aria-label="`Go to slide ${index + 1}`"
-                    ></button>
-                </template>
+                        }" :aria-label="`Go to slide ${index + 1}`"></button>
+                        </template>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <script>
-        function heroSlider() {
-            return {
-                currentSlide: 0,
-                autoplay: true,
-                interval: null,
-                slides: [
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/xfoto6.jpg"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/xfoto4c.jpg"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/xfoto2.jpg"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/DSC06754.JPG"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/DSC06407.JPG"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/xFoto3.jpg"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/DSC00816.JPG"
-                    }
-                    ,{
-                        title: "Atracciones Plaza",
-                        description: "Plaza para niños con juegos y diversión asegurada",
-                        buttonText: "Contactar ahora",
-                        buttonUrl: "#",
-                        image: "/images/fotos/DSC06110.JPG"
-                    },
-                    {
-                        title: "Pueblo Indígena",
-                        description: "Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas.",
-                        buttonText: "Pueblo Indígena",
-                        buttonUrl: "#",
-                        image: "/images/fotos/Photo21_17A.jpg"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/20131215_195037.jpg"
-                    },
-                    {
-                        title: "Atracciones Soga",
-                        description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
-                        buttonText: "Atracciones Soga",
-                        buttonUrl: "#",
-                        image: "/images/fotos/Photo23_19A.jpg"
-                    }
-                ],
-                init() {
-                    this.startAutoplay();
-                },
-                next() {
-                    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-                },
-                prev() {
-                    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-                },
-                goTo(index) {
-                    this.currentSlide = index;
-                },
-                startAutoplay() {
-                    this.interval = setInterval(() => {
-                        if (this.autoplay) {
-                            this.next();
+            <script>
+                function heroSlider() {
+                    return {
+                        currentSlide: 0,
+                        autoplay: true,
+                        interval: null,
+                        slides: [
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/xfoto6.jpg"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/xfoto4c.jpg"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/xfoto2.jpg"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/DSC06754.JPG"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/DSC06407.JPG"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/xFoto3.jpg"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/DSC00816.JPG"
+                            }
+                            , {
+                                title: "Atracciones Plaza",
+                                description: "Plaza para niños con juegos y diversión asegurada",
+                                buttonText: "Contactar ahora",
+                                buttonUrl: "#",
+                                image: "/images/fotos/DSC06110.JPG"
+                            },
+                            {
+                                title: "Pueblo Indígena",
+                                description: "Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas.",
+                                buttonText: "Pueblo Indígena",
+                                buttonUrl: "#",
+                                image: "/images/fotos/Photo21_17A.jpg"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/20131215_195037.jpg"
+                            },
+                            {
+                                title: "Atracciones Soga",
+                                description: "La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles.",
+                                buttonText: "Atracciones Soga",
+                                buttonUrl: "#",
+                                image: "/images/fotos/Photo23_19A.jpg"
+                            }
+                        ],
+                        init() {
+                            this.startAutoplay();
+                        },
+                        next() {
+                            this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+                        },
+                        prev() {
+                            this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                        },
+                        goTo(index) {
+                            this.currentSlide = index;
+                        },
+                        startAutoplay() {
+                            this.interval = setInterval(() => {
+                                if (this.autoplay) {
+                                    this.next();
+                                }
+                            }, 5000);
+                        },
+                        replaceBrokenImage(event) {
+                            // Fallback obrázky z iného zdroja
+                            const fallbacks = [
+                                'https://picsum.photos/id/1018/1920/1080',
+                                'https://picsum.photos/id/1015/1920/1080',
+                                'https://picsum.photos/id/1019/1920/1080'
+                            ];
+                            event.target.src = fallbacks[this.currentSlide % fallbacks.length];
                         }
-                    }, 5000);
-                },
-                replaceBrokenImage(event) {
-                    // Fallback obrázky z iného zdroja
-                    const fallbacks = [
-                        'https://picsum.photos/id/1018/1920/1080',
-                        'https://picsum.photos/id/1015/1920/1080',
-                        'https://picsum.photos/id/1019/1920/1080'
-                    ];
-                    event.target.src = fallbacks[this.currentSlide % fallbacks.length];
+                    }
                 }
-            }
-        }
-    </script>
-         </section>
+            </script>
+        </section>
 
         <section id="castle" class="animate-fade-in-up" style="animation-delay: 0.4s;">
             <div class="container mx-auto px-12 py-6">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="flex justify-center md:justify-start">
-                        <img src="images/castillo.png" alt="Castillo Inflable" class="w-full max-w-lg h-auto object-cover">
+                        <img src="images/castillo.png" alt="Castillo Inflable"
+                            class="w-full max-w-lg h-auto object-cover">
                     </div>
                     <div class="text-center md:text-left">
                         <div class="flex items-center justify-center mb-16">
-                            <img src="images/logo_header.svg" alt="Happy Park" class="w-3/5 h-auto object-contain mx-auto">
+                            <img src="images/logo_header.svg" alt="Happy Park"
+                                class="w-3/5 h-auto object-contain mx-auto">
                         </div>
-                        <p class="text-xl md:text-2xl text-gray-700 leading-[2] tracking-widest text-justify max-w-2xl mx-auto md:mx-0">
-                            Happy Park, salón de fiestas y atracciones infantiles, cubierto, rodeado de parque y naturaleza, con más de 25 años de trayectoria ininterrumpida en diversión y entretenimiento infantil.
+                        <p
+                            class="text-xl md:text-2xl text-gray-700 leading-[2] tracking-widest text-justify max-w-2xl mx-auto md:mx-0">
+                            Happy Park, salón de fiestas y atracciones infantiles, cubierto, rodeado de parque y
+                            naturaleza, con más de 25 años de trayectoria ininterrumpida en diversión y entretenimiento
+                            infantil.
                         </p>
                     </div>
                 </div>
@@ -393,189 +457,300 @@
         </section>
 
         <div class="container mx-auto px-6">
-        <section id="attractions" class="mb-20 animate-fade-in-up" style="animation-delay: 0.3s;">
-            <!--https://tailwindflex.com/@Starboy/our-services-->
-            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <style>
-        [x-cloak] { display: none !important; }
-        .slide-transition {
-            transition: transform 0.5s ease-in-out;
-        }
-    </style>
-    <div class="container mx-auto px-4 pt-1 pb-8">
-        <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10 tracking-tight">
-            Atracciones
-        </h2>
-        <div 
-            x-data="carousel()"
-            x-cloak
-            class="relative"
-        >
-            <div class="relative overflow-hidden rounded-lg shadow-xl">
-                <div 
-                    class="flex slide-transition"
-                    :style="`transform: translateX(-${currentSlide * slidePercentage}%)`"
-                >
-                    <template x-for="(slide, index) in slides" :key="slide.id">
-                        <div class="w-full md:w-1/3 flex-shrink-0 px-2 py-4">
-                            <div class="rounded-lg overflow-hidden shadow-md h-full">
-                                <div class="bg-gray-200 h-48 md:h-64 flex items-center justify-center">
-                                    <img 
-                                        :src="slide.image" 
-                                        :alt="slide.title" 
-                                        class="w-full h-full object-cover"
-                                        @error="handleImageError(slide)"
-                                    >
-                                </div>
-                                <div class="p-4">
-                                    <h3 x-text="slide.title" class="text-xl font-semibold"></h3>
-                                    <p x-text="slide.description" class="text-gray-600 mt-2"></p>
-                                </div>
+            <section id="attractions" class="animate-fade-in-up" style="animation-delay: 0.3s;">
+                <!--https://tailwindflex.com/@Starboy/our-services-->
+                <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+                <style>
+                    [x-cloak] {
+                        display: none !important;
+                    }
+
+                    .slide-transition {
+                        transition: transform 0.5s ease-in-out;
+                    }
+                </style>
+                <div class="container mx-auto px-4 pt-1 pb-8">
+                    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10 tracking-tight">
+                        Atracciones
+                    </h2>
+                    <div x-data="carousel()" x-cloak class="relative">
+                        <div class="relative overflow-hidden rounded-lg shadow-xl">
+                            <div class="flex slide-transition"
+                                :style="`transform: translateX(-${currentSlide * slidePercentage}%)`">
+                                <template x-for="(slide, index) in slides" :key="slide.id">
+                                    <div class="w-full md:w-1/3 flex-shrink-0 px-2 py-4">
+                                        <div class="rounded-lg overflow-hidden shadow-md h-full">
+                                            <div class="bg-gray-200 h-48 md:h-64 flex items-center justify-center">
+                                                <img :src="slide.image" :alt="slide.title"
+                                                    class="w-full h-full object-cover" @error="handleImageError(slide)">
+                                            </div>
+                                            <div class="p-4">
+                                                <h3 x-text="slide.title" class="text-xl font-semibold"></h3>
+                                                <p x-text="slide.description" class="text-gray-600 mt-2"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
                             </div>
                         </div>
-                    </template>
+
+                        <button @click="prev()"
+                            class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md z-10 -ml-4"
+                            :disabled="currentSlide === 0"
+                            :class="{ 'opacity-50 cursor-not-allowed': currentSlide === 0 }">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button @click="next()"
+                            class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md z-10 -mr-4"
+                            :disabled="currentSlide >= slides.length - visibleSlides"
+                            :class="{ 'opacity-50 cursor-not-allowed': currentSlide >= slides.length - visibleSlides }">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <div class="flex justify-center mt-4 space-x-2">
+                            <template x-for="(slide, index) in slides" :key="slide.id">
+                                <button @click="goTo(index)" class="w-3 h-3 rounded-full transition-colors"
+                                    :class="{ 'bg-blue-600': currentSlide === index, 'bg-gray-300': currentSlide !== index }"
+                                    :aria-label="`Prejsť na slide ${index + 1}`"></button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function carousel() {
+                        return {
+                            currentSlide: 0,
+                            visibleSlides: 1,
+                            slidePercentage: 100,
+                            slides: [
+                                {
+                                    id: 1,
+                                    image: '/images/Atracciones/jungla-1.jpg',
+                                    title: 'Jungla Encantada',
+                                    description: 'Es un lugar fascinante, con pura naturaleza donde los chicos disfrutan recorriendo sus curvos caminitos y puentecitos, sumergiéndose en un mundo lleno de fantasías y aventuras. Los chicos no dejan de sorprenderse al recorrer todos y cada uno de los rincones únicos e incomparables, por su encanto y singular belleza.'
+                                },
+                                {
+                                    id: 2,
+                                    image: '/images/Atracciones/pueblo-2.jpg',
+                                    title: 'Pueblo Indígena',
+                                    description: 'Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas. Los chicos reviven la cultura y forma de vida de aquellos pueblos al realizar actividades como recolectar frutas y verduras, cocinar en el fogón y proteger al pueblo y sus habitantes del ataque de animales.'
+                                },
+                                {
+                                    id: 3,
+                                    image: '/images/Atracciones/soga-1.jpg',
+                                    title: 'La Soga de Tarzán',
+                                    description: 'La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles. La soga de Tarzán es un juego apto para los fans de las emociones y la adrenalina.'
+                                },
+                                {
+                                    id: 4,
+                                    image: '/images/Atracciones/futbol-3.jpg',
+                                    title: 'Cancha de Fútbol',
+                                    description: 'Tanto varones como nenas se divierten jugando al Fútbol, Handball, Quemado y divertidos juegos de competencia por premios. Happy Park es el lugar ideal, donde la destreza de los chicos se pone en acción.'
+                                },
+                                {
+                                    id: 5,
+                                    image: '/images/Atracciones/casita-5.jpg',
+                                    title: 'Casita Laberinto',
+                                    description: 'En ella el tiempo no tiene fronteras y los chicos la disfrutan recorriendo sus laberintos y rincones, saludando a sus padres desde los balcones, para luego volver una y otra vez a recorrerla o bien crear en ella historias en un mundo de fantasías.'
+                                },
+                                {
+                                    id: 6,
+                                    image: '/images/Atracciones/casita-2.jpg',
+                                    title: 'Castillo Inflable',
+                                    description: 'El Castillo Inflable fue realizado a medida, buscando una combinación de colores divertidos. El tobogán de acceso a la puertita de entrada es mucho más amplio y con suficientes bordes laterales, para optimizar al máximo la seguridad de los chicos.'
+                                },
+                                {
+                                    id: 7,
+                                    image: '/images/Atracciones/plaza-5.jpg',
+                                    title: 'Plaza Happy Park',
+                                    description: 'Por una arcada de troncos se entra a "La Plaza Happy Park", un lugar encantador pensado para el buen esparcimiento de los chicos. En este sector los chicos descubren un atractivo espacio en el cual se encuentran instalados juegos como: Hamacas, Toboganes, Trepadora y Calesitas.'
+                                }
+
+                            ],
+                            init() {
+                                this.updateVisibleSlides();
+                                window.addEventListener('resize', () => {
+                                    this.updateVisibleSlides();
+                                });
+                            },
+                            updateVisibleSlides() {
+                                if (window.innerWidth < 768) {
+                                    this.visibleSlides = 1;
+                                    this.slidePercentage = 100;
+                                } else {
+                                    this.visibleSlides = 3;
+                                    this.slidePercentage = 100 / 3;
+                                }
+                            },
+                            next() {
+                                if (this.currentSlide < this.slides.length - this.visibleSlides) {
+                                    this.currentSlide += 1;
+                                }
+                            },
+                            prev() {
+                                if (this.currentSlide > 0) {
+                                    this.currentSlide -= 1;
+                                }
+                            },
+                            goTo(index) {
+                                if (index <= this.slides.length - this.visibleSlides) {
+                                    this.currentSlide = index;
+                                } else {
+                                    this.currentSlide = this.slides.length - this.visibleSlides;
+                                }
+                            },
+                            handleImageError(slide) {
+                                // Fallback obrázok ak sa pôvodný nepodarí načítať
+                                slide.image = 'https://picsum.photos/id/20/800/600';
+                            }
+                        }
+                    }
+                </script>
+            </section>
+        </div>
+        
+
+
+        <section id="games" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4">Juegos Recreativos</h2>
+                    <p class="max-w-2xl mx-auto text-gray-600 mt-6 text-lg">Más de 25 años de trayectoria ininterrumpida en diversión y entretenimiento</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Gallery Item 1 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/xfoto3.jpg"
+                            alt="Concert crowd"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Rodados</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/xfoto5.jpg"
+                            alt="Team building"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Calesitas</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/xfoto4s.jpg"
+                            alt="Office meeting"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Sala Blanda</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/xfoto1.jpg"
+                            alt="Team celebration"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Básquet</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/xfoto10.jpg"
+                            alt="Conference"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Metegol</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/DSC06301.JPG"
+                            alt="Volunteering"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Búsqueda del tesoro</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/xbanner14.jpg"
+                            alt="Award ceremony"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Video Juegos</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 -->
+                    <div class="group relative overflow-hidden rounded-lg aspect-square">
+                        <img src="/images/Juegos/DSC00709.JPG"
+                            alt="Office party"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-xl font-bold">Disfraces</h3>
+                                <p class="text-white/80 mt-1"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <button 
-                @click="prev()"
-                class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md z-10 -ml-4"
-                :disabled="currentSlide === 0"
-                :class="{ 'opacity-50 cursor-not-allowed': currentSlide === 0 }"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button 
-                @click="next()"
-                class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md z-10 -mr-4"
-                :disabled="currentSlide >= slides.length - visibleSlides"
-                :class="{ 'opacity-50 cursor-not-allowed': currentSlide >= slides.length - visibleSlides }"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-
-            <div class="flex justify-center mt-4 space-x-2">
-                <template x-for="(slide, index) in slides" :key="slide.id">
-                    <button
-                        @click="goTo(index)"
-                        class="w-3 h-3 rounded-full transition-colors"
-                        :class="{ 'bg-blue-600': currentSlide === index, 'bg-gray-300': currentSlide !== index }"
-                        :aria-label="`Prejsť na slide ${index + 1}`"
-                    ></button>
-                </template>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function carousel() {
-            return {
-                currentSlide: 0,
-                visibleSlides: 1,
-                slidePercentage: 100,
-                slides: [
-                    { 
-                        id: 1, 
-                        image: '/images/Atracciones/jungla-1.jpg', 
-                        title: 'Jungla Encantada', 
-                        description: 'Es un lugar fascinante, con pura naturaleza donde los chicos disfrutan recorriendo sus curvos caminitos y puentecitos, sumergiéndose en un mundo lleno de fantasías y aventuras. Los chicos no dejan de sorprenderse al recorrer todos y cada uno de los rincones únicos e incomparables, por su encanto y singular belleza.' 
-                    },
-                    { 
-                        id: 2, 
-                        image: '/images/Atracciones/pueblo-2.jpg', 
-                        title: 'Pueblo Indígena', 
-                        description: 'Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas. Los chicos reviven la cultura y forma de vida de aquellos pueblos al realizar actividades como recolectar frutas y verduras, cocinar en el fogón y proteger al pueblo y sus habitantes del ataque de animales.' 
-                    },
-                    { 
-                        id: 3, 
-                        image: '/images/Atracciones/soga-1.jpg', 
-                        title: 'La Soga de Tarzán', 
-                        description: 'La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles. La soga de Tarzán es un juego apto para los fans de las emociones y la adrenalina.' 
-                    },
-                    { 
-                        id: 4, 
-                        image: '/images/Atracciones/futbol-3.jpg', 
-                        title: 'Cancha de Fútbol', 
-                        description: 'Tanto varones como nenas se divierten jugando al Fútbol, Handball, Quemado y divertidos juegos de competencia por premios. Happy Park es el lugar ideal, donde la destreza de los chicos se pone en acción.' 
-                    },
-                    { 
-                        id: 5, 
-                        image: '/images/Atracciones/casita-5.jpg', 
-                        title: 'Casita Laberinto', 
-                        description: 'En ella el tiempo no tiene fronteras y los chicos la disfrutan recorriendo sus laberintos y rincones, saludando a sus padres desde los balcones, para luego volver una y otra vez a recorrerla o bien crear en ella historias en un mundo de fantasías.' 
-                    },
-                    { 
-                        id: 6, 
-                        image: '/images/Atracciones/casita-2.jpg', 
-                        title: 'Castillo Inflable', 
-                        description: 'El Castillo Inflable fue realizado a medida, buscando una combinación de colores divertidos. El tobogán de acceso a la puertita de entrada es mucho más amplio y con suficientes bordes laterales, para optimizar al máximo la seguridad de los chicos.' 
-                    },
-                    { 
-                        id: 7, 
-                        image: '/images/Atracciones/plaza-5.jpg', 
-                        title: 'Plaza Happy Park', 
-                        description: 'Por una arcada de troncos se entra a "La Plaza Happy Park", un lugar encantador pensado para el buen esparcimiento de los chicos. En este sector los chicos descubren un atractivo espacio en el cual se encuentran instalados juegos como: Hamacas, Toboganes, Trepadora y Calesitas.' 
-                    }
-                    
-                ],
-                init() {
-                    this.updateVisibleSlides();
-                    window.addEventListener('resize', () => {
-                        this.updateVisibleSlides();
-                    });
-                },
-                updateVisibleSlides() {
-                    if (window.innerWidth < 768) {
-                        this.visibleSlides = 1;
-                        this.slidePercentage = 100;
-                    } else {
-                        this.visibleSlides = 3;
-                        this.slidePercentage = 100 / 3;
-                    }
-                },
-                next() {
-                    if (this.currentSlide < this.slides.length - this.visibleSlides) {
-                        this.currentSlide += 1;
-                    }
-                },
-                prev() {
-                    if (this.currentSlide > 0) {
-                        this.currentSlide -= 1;
-                    }
-                },
-                goTo(index) {
-                    if (index <= this.slides.length - this.visibleSlides) {
-                        this.currentSlide = index;
-                    } else {
-                        this.currentSlide = this.slides.length - this.visibleSlides;
-                    }
-                },
-                handleImageError(slide) {
-                    // Fallback obrázok ak sa pôvodný nepodarí načítať
-                    slide.image = 'https://picsum.photos/id/20/800/600';
-                }
-            }
-        }
-    </script>
-        </div>
-
-        
-      <section id="games" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
-            <h2 class="text-3xl font-bold mb-8">Juegos</h2>
         </section>
 
         <section id="activities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.5s;">
             <h2 class="text-3xl font-bold mb-8">Actividades</h2>
-            
+
         </section>
 
         <section id="facilities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.6s;">
             <h2 class="text-3xl font-bold mb-8">Instalaciones</h2>
-            
+
         </section>
 
         <section id="services" class="mb-20 animate-fade-in-up" style="animation-delay: 0.7s;">
@@ -584,162 +759,166 @@
 
         <section id="prices" class="mb-20 animate-fade-in-up" style="animation-delay: 0.8s;">
             <h2 class="text-3xl font-bold mb-8">Precios</h2>
-            
+
         </section>
         <div class="flex justify-center mt-8 space-x-2" id="indicators"></div>
-    </div>
+        </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.getElementById('track');
-            const nextBtn = document.getElementById('nextBtn');
-            const prevBtn = document.getElementById('prevBtn');
-            const dotsContainer = document.getElementById('indicators');
-            const container = document.getElementById('carousel-container');
-            
-            let index = 0;
-            const items = track.children;
-            const itemsPerView = window.innerWidth >= 768 ? 3 : 1;
-            const maxIndex = items.length - itemsPerView;
-            let autoPlayInterval;
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const track = document.getElementById('track');
+                const nextBtn = document.getElementById('nextBtn');
+                const prevBtn = document.getElementById('prevBtn');
+                const dotsContainer = document.getElementById('indicators');
+                const container = document.getElementById('carousel-container');
 
-            // Generar Puntos
-            for (let i = 0; i <= maxIndex; i++) {
-                const dot = document.createElement('button');
-                dot.className = `h-3 rounded-full transition-all duration-300 ${i === 0 ? 'bg-blue-900 w-8' : 'bg-gray-300 w-3'}`;
-                dot.addEventListener('click', () => { index = i; updateCarousel(); });
-                dotsContainer.appendChild(dot);
-            }
-            const dots = dotsContainer.children;
+                let index = 0;
+                const items = track.children;
+                const itemsPerView = window.innerWidth >= 768 ? 3 : 1;
+                const maxIndex = items.length - itemsPerView;
+                let autoPlayInterval;
 
-            function updateCarousel() {
-                track.style.transform = `translateX(-${(index * 100) / itemsPerView}%)`;
-                Array.from(dots).forEach((dot, i) => {
-                    dot.className = `h-3 rounded-full transition-all duration-300 ${i === index ? 'bg-blue-900 w-8' : 'bg-gray-300 w-3'}`;
-                });
-            }
+                // Generar Puntos
+                for (let i = 0; i <= maxIndex; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `h-3 rounded-full transition-all duration-300 ${i === 0 ? 'bg-blue-900 w-8' : 'bg-gray-300 w-3'}`;
+                    dot.addEventListener('click', () => { index = i; updateCarousel(); });
+                    dotsContainer.appendChild(dot);
+                }
+                const dots = dotsContainer.children;
 
-            function nextSlide() {
-                index = index < maxIndex ? index + 1 : 0;
-                updateCarousel();
-            }
-            
-            function prevSlide() {
-                index = index > 0 ? index - 1 : maxIndex;
-                updateCarousel();
-            }
+                function updateCarousel() {
+                    track.style.transform = `translateX(-${(index * 100) / itemsPerView}%)`;
+                    Array.from(dots).forEach((dot, i) => {
+                        dot.className = `h-3 rounded-full transition-all duration-300 ${i === index ? 'bg-blue-900 w-8' : 'bg-gray-300 w-3'}`;
+                    });
+                }
 
-            // Eventos
-            nextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
-            prevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
-            
-            // Autoplay y Pausa
-            function startTimer() { autoPlayInterval = setInterval(nextSlide, 4000); }
-            function resetTimer() { clearInterval(autoPlayInterval); startTimer(); }
-            container.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-            container.addEventListener('mouseleave', startTimer);
+                function nextSlide() {
+                    index = index < maxIndex ? index + 1 : 0;
+                    updateCarousel();
+                }
 
-            startTimer();
-            window.addEventListener('resize', () => location.reload());
-        });
-    </script>
+                function prevSlide() {
+                    index = index > 0 ? index - 1 : maxIndex;
+                    updateCarousel();
+                }
+
+                // Eventos
+                nextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
+                prevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
+
+                // Autoplay y Pausa
+                function startTimer() { autoPlayInterval = setInterval(nextSlide, 4000); }
+                function resetTimer() { clearInterval(autoPlayInterval); startTimer(); }
+                container.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+                container.addEventListener('mouseleave', startTimer);
+
+                startTimer();
+                window.addEventListener('resize', () => location.reload());
+            });
+        </script>
         </section>
 
-        
+
 
         <section id="contact" class="contact-section">
-  <div class="container mx-auto px-4 py-8">
-    <div class="grid md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden">
-      
-      <!-- Contact Info -->
-      <div class="p-8 bg-green text-white">
-        <h2 class="text-2xl text-white mb-8 relative pb-4">
-          Información de Contacto
-          <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
-        </h2>
-        
-        <!-- Location -->
-        <div class="flex items-start gap-4 mb-8">
-          <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div>
-            <h3 class="text-lg mb-1">Ubicación</h3>
-            <p class="text-gray-300 leading-relaxed">
-              Buenos Aires 1946, Olivos - a siete cuadras de la Quinta Presidencial -.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Phone Numbers -->
-        <div class="flex items-sBuenos Aires 1946, Olivos -a siete cuadras de la Quinta Presidencial-.tart gap-4 mb-8">
-          <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div>
-            <h3 class="text-lg mb-1">Teléfonos</h3>
-            <p class="text-gray-300 leading-relaxed">
-              <a href="tel:+541147914639" class="hover:text-blue-400">+5411 4791-4639</a><br />
-              <a href="tel:+54111530225661" class="hover:text-blue-400">+5411 15 30225661</a>
-            </p>
-          </div>
-        </div>
-        
-        <!-- Email -->
-        <div class="flex items-start gap-4 mb-8">
-          <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <h3 class="text-lg mb-1">Correo Electrónico</h3>
-            <p class="text-gray-300 leading-relaxed">
-              <a href="mailto:info@happypark.com.ar" class="hover:text-blue-400">info@happypark.com.ar</a><br />
-             
-            </p>
-          </div>
-        </div>
-        
-        <!-- Social Links -->
-        <div class="flex gap-4 mt-8">
-          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-500 transform hover:-translate-y-1">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-pink-500 transform hover:-translate-y-1">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-400 transform hover:-translate-y-1">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-700 transform hover:-translate-y-1">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Contact Form -->
-      <div class="p-8">
-        <h2 class="text-2xl font-bold mb-8 relative pb-4">
-          Ubicación en el Mapa
-          <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
-        </h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8192193484355!2d-58.4968676!3d-34.5215555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb130f39d902b%3A0x835ab45b7d750c63!2sHappy%20Park!5e0!3m2!1ses!2sar!4v1708876800000" 
-          width="100%" 
-          height="450" 
-          style="border:0; border-radius: 8px;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="container mx-auto px-4 py-8">
+                <div class="grid md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden">
+
+                    <!-- Contact Info -->
+                    <div class="p-8 bg-green text-white">
+                        <h2 class="text-2xl text-white mb-8 relative pb-4">
+                            Información de Contacto
+                            <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+                        </h2>
+
+                        <!-- Location -->
+                        <div class="flex items-start gap-4 mb-8">
+                            <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg mb-1">Ubicación</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Buenos Aires 1946, Olivos - a siete cuadras de la Quinta Presidencial -.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone Numbers -->
+                        <div
+                            class="flex items-sBuenos Aires 1946, Olivos -a siete cuadras de la Quinta Presidencial-.tart gap-4 mb-8">
+                            <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg mb-1">Teléfonos</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    <a href="tel:+541147914639" class="hover:text-blue-400">+5411 4791-4639</a><br />
+                                    <a href="tel:+54111530225661" class="hover:text-blue-400">+5411 15 30225661</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4 mb-8">
+                            <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg mb-1">Correo Electrónico</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    <a href="mailto:info@happypark.com.ar"
+                                        class="hover:text-blue-400">info@happypark.com.ar</a><br />
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex gap-4 mt-8">
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-500 transform hover:-translate-y-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-pink-500 transform hover:-translate-y-1">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-400 transform hover:-translate-y-1">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-700 transform hover:-translate-y-1">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold mb-8 relative pb-4">
+                            Ubicación en el Mapa
+                            <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+                        </h2>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8192193484355!2d-58.4968676!3d-34.5215555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb130f39d902b%3A0x835ab45b7d750c63!2sHappy%20Park!5e0!3m2!1ses!2sar!4v1708876800000"
+                            width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
         </div>
     </main>
 
     <footer class="bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg mt-12">
         <div class="container mx-auto px-6 py-12">
-            <div class="mt-10 pt-6 border-t border-white border-opacity-10 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+            <div
+                class="mt-10 pt-6 border-t border-white border-opacity-10 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 Happy Park. Todos los derechos reservados.</p>
                 <p>Hecho con amor para la diversión.</p>
             </div>
@@ -751,11 +930,11 @@
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
-        
+
         menuToggle.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
-            
+
             if (isHidden) {
                 // Animar items cuando se abre el menú
                 mobileMenuItems.forEach((item, index) => {
@@ -807,4 +986,5 @@
         });
     </script>
 </body>
+
 </html>
