@@ -197,7 +197,7 @@
                     <a href="#services" class="menu-item menu-services transition-colors duration-300"
                         style="animation-delay: 0.5s;">Servicios</a>
                     <a href="#prices" class="menu-item menu-prices transition-colors duration-300"
-                        style="animation-delay: 0.6s;">Eventos</a>
+                        style="animation-delay: 0.6s;">Visitas</a>
                     <a href="#contact" class="menu-item menu-contact transition-colors duration-300"
                         style="animation-delay: 0.7s;">Contacto</a>
                 </div>
@@ -222,7 +222,7 @@
             <a href="#services"
                 class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-300">Servicios</a>
             <a href="#prices"
-                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Eventos</a>
+                class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Visitas</a>
             <a href="#contact"
                 class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-green-600 hover:text-green-700 transition-colors duration-300">Contacto</a>
         </div>
@@ -1044,16 +1044,16 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
         </section>
 
         <section id="prices" class="mb-20 animate-fade-in-up" style="animation-delay: 0.8s;">
-            <h2 class="text-3xl font-bold mb-8 text-center">Eventos</h2>
             <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <style>
-        [x-cloak] { display: none !important; }
-        .slide-transition {
-            transition: transform 0.5s ease-in-out;
-        }
-    </style>
+            <style>
+                [x-cloak] { display: none !important; }
+                .slide-transition {
+                    transition: transform 0.5s ease-in-out;
+                }
+                </style>
 <div class="bg-gray-100">
     <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-8 text-center">Visitas Destacadas</h2>
         
         <div 
             x-data="carousel()"
@@ -1147,17 +1147,72 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
                     },
                     { 
                         id: 4, 
+                        image: '/images/Visitas/paola_prenat_y_marcelo_iribarne.jpg', 
+                        title: 'Paola Prenat y Marcelo Iribarne', 
+                        description: 'Conductores de Televisión' 
+                    },
+                    { 
+                        id: 5, 
+                        image: '/images/Visitas/cinthia_fernandez_y_matias_defederico.jpg', 
+                        title: 'Cinthia Fernandez y Matías Defederico', 
+                        description: 'Modelo y panelista de televisión / exfutbolista' 
+                    },
+                    { 
+                        id: 6, 
+                        image: '/images/Visitas/alejandra_darin.jpg', 
+                        title: 'Alejandra Darin', 
+                        description: 'Actriz de cine y televisión' 
+                    }
+                    ,
+                    { 
+                        id: 7, 
                         image: '/images/Visitas/francisco_de_narvaez.jpg', 
                         title: 'Francisco de Narváez', 
                         description: 'Político y empresario argentino' 
                     },
-                ,
                     { 
-                        id: 5, 
-                        image: 'https://picsum.photos/id/13/800/600', 
-                        title: 'Nature 4', 
-                        description: 'Nature last' 
+                        id: 8, 
+                        image: '/images/Visitas/mariana_antoniale.jpg', 
+                        title: 'Mariana Antoniale', 
+                        description: 'Modelo Vedette'
+                    },
+                    { 
+                        id: 9, 
+                        image: '/images/Visitas/thelma_biral_y_alberto_fernandez_de_rosa.jpg', 
+                        title: 'Thelma Biral y Alberto F. de Rosa', 
+                        description: 'Actriz y Actor de cine, teatro y televisión'
+                    },
+                    { 
+                        id: 10, 
+                        image: '/images/Visitas/jimena_campisi_y_virginia_gallardo.jpg', 
+                        title: 'Jimena Campisi y Virginia Gallardo', 
+                        description: 'Modelo y Actriz / Modelo, vedette, bailarina'
+                    },
+                    { 
+                        id: 11, 
+                        image: '/images/Visitas/jorge_suarez.jpg', 
+                        title: 'Jorge Suárez', 
+                        description: 'Actor y Docente Teatral'
+                    },
+                    { 
+                        id: 12, 
+                        image: '/images/Visitas/gisela_bernal.jpg', 
+                        title: 'Gisela Bernal', 
+                        description: 'Bailarina y Actriz'
+                    },
+                    { 
+                        id: 13, 
+                        image: '/images/Visitas/beto_alonso.jpg', 
+                        title: 'Beto Alonso', 
+                        description: 'ExFutbolista'
+                    },
+                    { 
+                        id: 14, 
+                        image: '/images/Visitas/sergio_gonal.jpg', 
+                        title: 'Sergio Gonal', 
+                        description: 'Actor Humorista'
                     }
+                    
                 ],
                 init() {
                     this.updateVisibleSlides();
