@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Mulish', sans-serif;
+  background: linear-gradient(135deg, #E8F4F8 0%, #D4F1E8 25%, #F0E8F4 50%, #F4F0E8 75%, #E8F0F4 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(173, 216, 230, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(144, 238, 144, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(255, 228, 181, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main,
+header {
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Arima Madurai', cursive;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.menu-item {
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.menu-home { color: #8E7CC3; }
+.menu-home:hover { color: #6F5FA8; }
+
+.menu-attractions { color: #FF6B6B; }
+.menu-attractions:hover { color: #FF5252; }
+
+.menu-games { color: #95B8A1; }
+.menu-games:hover { color: #7FA392; }
+
+.menu-activities { color: #FFB74D; }
+.menu-activities:hover { color: #FFA726; }
+
+.menu-facilities { color: #E91E8C; }
+.menu-facilities:hover { color: #C71B7A; }
+
+.menu-services { color: #1E90FF; }
+.menu-services:hover { color: #1873CC; }
+
+.menu-prices { color: #FF6B6B; }
+.menu-prices:hover { color: #FF5252; }
+
+.menu-contact { color: #95B8A1; }
+.menu-contact:hover { color: #7FA392; }
+
+.skill-bar {
+  transition: width 1s ease-out;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.bg-attractions {
+  background-color: #FF6B6B;
+}
+
+.bg-attractions:hover {
+  background-color: #FF5252;
+}
+
+.bg-green {
+  background-color: #95B8A1;
+}
+
+.bg-green:hover {
+  background-color: #7FA392;
+}
+
+.hero-slide {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-content {
+  transition: all 0.6s ease 0.3s;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.slide-transition {
+  transition: transform 0.5s ease-in-out;
+}
+
+@layer utilities {
+  .hidden {
+    display: none !important;
+  }
+}

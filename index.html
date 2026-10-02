@@ -12,169 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Mulish', sans-serif;
-            background: linear-gradient(135deg, #E8F4F8 0%, #D4F1E8 25%, #F0E8F4 50%, #F4F0E8 75%, #E8F0F4 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./output.css" />
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image:
-                radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(173, 216, 230, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(144, 238, 144, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 60% 40%, rgba(255, 228, 181, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        main,
-        header {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Arima Madurai', cursive;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .menu-item {
-            opacity: 0;
-            animation: slideUp 0.5s ease-out forwards;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .menu-home {
-            color: #8E7CC3;
-        }
-
-        .menu-home:hover {
-            color: #6F5FA8;
-        }
-
-        .menu-attractions {
-            color: #FF6B6B;
-        }
-
-        .menu-attractions:hover {
-            color: #FF5252;
-        }
-
-        .menu-games {
-            color: #95B8A1;
-        }
-
-        .menu-games:hover {
-            color: #7FA392;
-        }
-
-        .menu-activities {
-            color: #FFB74D;
-        }
-
-        .menu-activities:hover {
-            color: #FFA726;
-        }
-
-        .menu-facilities {
-            color: #E91E8C;
-        }
-
-        .menu-facilities:hover {
-            color: #C71B7A;
-        }
-
-        .menu-services {
-            color: #1E90FF;
-        }
-
-        .menu-services:hover {
-            color: #1873CC;
-        }
-
-        .menu-prices {
-            color: #FF6B6B;
-        }
-
-        .menu-prices:hover {
-            color: #FF5252;
-        }
-
-        .menu-contact {
-            color: #95B8A1;
-        }
-
-        .menu-contact:hover {
-            color: #7FA392;
-        }
-
-        .skill-bar {
-            transition: width 1s ease-out;
-        }
-
-        section {
-            scroll-margin-top: 100px;
-        }
-
-        .bg-attractions {
-            background-color: #FF6B6B;
-        }
-
-        .bg-attractions:hover {
-            background-color: #FF5252;
-        }
-
-        .bg-green {
-            background-color: #95B8A1;
-        }
-
-        .bg-green:hover {
-            background-color: #7FA392;
-        }
-    </style>
 </head>
 
 <body class="text-gray-800">
@@ -210,7 +50,7 @@
                 </button>
             </div>
         </nav>
-        <div id="mobileMenu" class="md:hidden hidden bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg">
+        <div id="mobileMenu" class="hidden md:hidden bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg">
             <a href="#attractions"
                 class="mobile-menu-item block py-2 px-4 text-sm font-semibold text-red-500 hover:text-red-600 transition-colors duration-300">Atracciones</a>
             <a href="#games"
@@ -232,30 +72,7 @@
         <section id="home" class="animate-fade-in-up" style="animation-delay: 0.2s;">
             <!--https://tailwindflex.com/@perky98/hero-slider-with-alpine-js-->
             <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-            <script src="https://cdn.tailwindcss.com"></script>
-            <style>
-                .hero-slide {
-                    transition: opacity 0.8s ease, transform 0.8s ease;
-                }
-
-                .slide-content {
-                    transition: all 0.6s ease 0.3s;
-                }
-
-                .fade-in {
-                    animation: fadeIn 1s ease-in;
-                }
-
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                    }
-
-                    to {
-                        opacity: 1;
-                    }
-                }
-            </style>
+            <!-- <script src="https://cdn.tailwindcss.com"></script> -->
             <div x-data="heroSlider()" class="relative overflow-hidden">
                 <div class="relative h-[80vh] min-h-[500px]">
                     <template x-for="(slide, index) in slides" :key="index">
@@ -275,7 +92,7 @@
                                     <h2 x-text="slide.title" class="text-4xl md:text-5xl font-bold mb-4 hidden"></h2>
                                     <p x-text="slide.description" class="text-xl md:text-2xl mb-8 hidden"></p>
                                     <a :href="slide.buttonUrl"
-                                        class="inline-block bg-attractions hover:bg-attractions-hover text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors fade-in hidden"
+                                        class="bg-attractions hover:bg-attractions-hover text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors fade-in hidden"
                                         x-text="slide.buttonText"></a>
                                 </div>
                             </div>
@@ -456,15 +273,6 @@
             <section id="attractions" class="animate-fade-in-up" style="animation-delay: 0.3s;">
                 <!--https://tailwindflex.com/@Starboy/our-services-->
                 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-                <style>
-                    [x-cloak] {
-                        display: none !important;
-                    }
-
-                    .slide-transition {
-                        transition: transform 0.5s ease-in-out;
-                    }
-                </style>
                 <div class="container mx-auto px-4 pt-1 pb-8">
                     <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10 tracking-tight">
                         Atracciones
@@ -734,7 +542,7 @@
 
         <section id="activities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.5s;">
             <!--https://tailwindflex.com/@perky98/product-carousel-with-tailwind-css-swiper-alpine-js -->
-            <script src="https://cdn.tailwindcss.com"></script>
+            <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
             <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -1045,12 +853,7 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
 
         <section id="prices" class="mb-20 animate-fade-in-up" style="animation-delay: 0.8s;">
             <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-            <style>
-                [x-cloak] { display: none !important; }
-                .slide-transition {
-                    transition: transform 0.5s ease-in-out;
-                }
-                </style>
+            
 <div class="bg-gray-100">
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-8 text-center">Visitas Destacadas</h2>
@@ -1426,29 +1229,34 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
 
-        menuToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden');
+        if (menuToggle && mobileMenu) {
+            mobileMenu.classList.add('hidden');
 
-            if (isHidden) {
-                // Animar items cuando se abre el menú
-                mobileMenuItems.forEach((item, index) => {
-                    item.style.animation = 'none';
-                    setTimeout(() => {
-                        item.style.animation = `slideUp 0.5s ease-out forwards`;
-                        item.style.animationDelay = `${index * 0.1}s`;
-                    }, 10);
-                });
-            }
-        });
+            menuToggle.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+
+                if (isHidden) {
+                    mobileMenuItems.forEach((item, index) => {
+                        item.style.animation = 'none';
+                        setTimeout(() => {
+                            item.style.animation = 'slideUp 0.5s ease-out forwards';
+                            item.style.animationDelay = `${index * 0.1}s`;
+                        }, 10);
+                    });
+                }
+            });
+        }
 
         // Desplazamiento suave para enlaces de navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            const targetSelector = anchor.getAttribute('href');
+            const target = targetSelector ? document.querySelector(targetSelector) : null;
+            if (!target) return;
+
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
@@ -1456,29 +1264,36 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
         function animateSkillBars() {
             const skillBars = document.querySelectorAll('.skill-bar');
             skillBars.forEach(bar => {
-                const targetWidth = bar.parentElement.previousElementSibling.lastElementChild.textContent;
+                if (!bar.parentElement || !bar.parentElement.previousElementSibling) return;
+                const label = bar.parentElement.previousElementSibling.lastElementChild;
+                if (!label) return;
+                const targetWidth = label.textContent;
                 bar.style.width = targetWidth;
             });
         }
 
         // Activar animación de barras cuando la sección de habilidades esté visible
         const skillsSection = document.getElementById('skills');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateSkillBars();
-                observer.unobserve(skillsSection);
-            }
-        }, { threshold: 0.5 });
+        if (skillsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(skillsSection);
+                }
+            }, { threshold: 0.5 });
 
-        observer.observe(skillsSection);
+            observer.observe(skillsSection);
+        }
 
-        // Envío del formulario (reemplaza con tu propia lógica)
+        // Envío del formulario (solo si existe)
         const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('¡Formulario enviado! (Reemplaza esto con tu propia lógica)');
-            form.reset();
-        });
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('¡Formulario enviado! (Reemplaza esto con tu propia lógica)');
+                form.reset();
+            });
+        }
     </script>
 </body>
 
