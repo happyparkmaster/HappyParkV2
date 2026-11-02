@@ -1,0 +1,36 @@
+.anim-delay-01 {
+    animation-delay: 0.1s;
+}
+
+.anim-delay-02 {
+    animation-delay: 0.2s;
+}
+
+.anim-delay-03 {
+    animation-delay: 0.3s;
+}
+
+.anim-delay-04 {
+    animation-delay: 0.4s;
+}
+
+.anim-delay-05 {
+    animation-delay: 0.5s;
+}
+
+.anim-delay-06 {
+    animation-delay: 0.6s;
+}
+
+.anim-delay-07 {
+    animation-delay: 0.7s;
+}
+
+.anim-delay-08 {
+    animation-delay: 0.8s;
+}
+
+.contact-map-frame {
+    border: 0;
+    border-radius: 8px;
+}

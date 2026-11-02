@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Park</title>
+    <title>:: Happy Park :: Sal&#243;n de Fiestas Infantiles en Zona Norte Happy Park, Sal&#243;n con animalitos</title>
+    <meta name="keywords" content="Sal&#243;n de Fiestas Infantiles, Zona Norte, Vicente L&#243;pez, cumplea&#241;os, bautismos, comuniones, reuniones, eventos, animalitos, diversi&#243;n, chicos, regalos, juegos, esparcimiento, entretenimientos, animaci&#243;n, actividades tem&#225;ticas" />
+    <meta name="description" content="Sal&#243;n de Fiestas Infantiles en Zona Norte, Vicente L&#243;pez. Lugar de eventos: como cumplea&#241;os, bautismos, comuniones, fiestas de egresados, despedidas y reuniones familiares." />
+    <link rel="shortcut icon" type="img/x-icon" href="img/content/happypark.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" type="img/x-icon" href="images/happypark.png" />
@@ -14,6 +18,7 @@
         rel="stylesheet">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./main.css" />
 
 </head>
 
@@ -26,20 +31,13 @@
                         class="h-20 w-auto object-contain mb-2 mt-2">
                 </a>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#attractions" class="menu-item menu-attractions transition-colors duration-300"
-                        style="animation-delay: 0.1s;">Atracciones</a>
-                    <a href="#games" class="menu-item menu-games transition-colors duration-300"
-                        style="animation-delay: 0.2s;">Juegos</a>
-                    <a href="#activities" class="menu-item menu-activities transition-colors duration-300"
-                        style="animation-delay: 0.3s;">Actividades</a>
-                    <a href="#facilities" class="menu-item menu-facilities transition-colors duration-300"
-                        style="animation-delay: 0.4s;">Seguridad</a>
-                    <a href="#services" class="menu-item menu-services transition-colors duration-300"
-                        style="animation-delay: 0.5s;">Servicios</a>
-                    <a href="#prices" class="menu-item menu-prices transition-colors duration-300"
-                        style="animation-delay: 0.6s;">Visitas</a>
-                    <a href="#contact" class="menu-item menu-contact transition-colors duration-300"
-                        style="animation-delay: 0.7s;">Contacto</a>
+                    <a href="#attractions" class="menu-item menu-attractions transition-colors duration-300 anim-delay-01">Atracciones</a>
+                    <a href="#games" class="menu-item menu-games transition-colors duration-300 anim-delay-02">Juegos</a>
+                    <a href="#activities" class="menu-item menu-activities transition-colors duration-300 anim-delay-03">Actividades</a>
+                    <a href="#facilities" class="menu-item menu-facilities transition-colors duration-300 anim-delay-04">Seguridad</a>
+                    <a href="#services" class="menu-item menu-services transition-colors duration-300 anim-delay-05">Servicios</a>
+                    <a href="#prices" class="menu-item menu-prices transition-colors duration-300 anim-delay-06">Visitas</a>
+                    <a href="#contact" class="menu-item menu-contact transition-colors duration-300 anim-delay-07">Contacto</a>
                 </div>
                 <button id="menuToggle" class="md:hidden focus:outline-none text-gray-800">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -69,9 +67,8 @@
     </header>
 
     <main class="">
-        <section id="home" class="animate-fade-in-up" style="animation-delay: 0.2s;">
+        <section id="home" class="animate-fade-in-up anim-delay-02">
             <!--https://tailwindflex.com/@perky98/hero-slider-with-alpine-js-->
-            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
             <!-- <script src="https://cdn.tailwindcss.com"></script> -->
             <div x-data="heroSlider()" class="relative overflow-hidden">
                 <div class="relative h-[80vh] min-h-[500px]">
@@ -131,7 +128,7 @@
             
         </section>
 
-        <section id="castle" class="animate-fade-in-up" style="animation-delay: 0.4s;">
+        <section id="castle" class="animate-fade-in-up anim-delay-04">
             <div class="container mx-auto px-12 py-6">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="flex justify-center md:justify-start">
@@ -155,14 +152,13 @@
         </section>
 
         <div class="container mx-auto px-6">
-            <section id="attractions" class="animate-fade-in-up" style="animation-delay: 0.3s;">
+            <section id="attractions" class="animate-fade-in-up anim-delay-03">
                 <!--https://tailwindflex.com/@Starboy/our-services-->
-                <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
                 <div class="container mx-auto px-4 pt-1 pb-8">
                     <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10 tracking-tight">
                         Atracciones
                     </h2>
-                    <div x-data="carousel()" x-cloak class="relative">
+                    <div x-data="attractionsCarousel()" x-cloak class="relative">
                         <div class="relative overflow-hidden rounded-lg shadow-xl">
                             <div class="flex slide-transition"
                                 :style="`transform: translateX(-${currentSlide * slidePercentage}%)`">
@@ -213,103 +209,12 @@
                         </div>
                     </div>
                 </div>
-
-                <script>
-                    function carousel() {
-                        return {
-                            currentSlide: 0,
-                            visibleSlides: 1,
-                            slidePercentage: 100,
-                            slides: [
-                                {
-                                    id: 1,
-                                    image: '/images/Atracciones/jungla-1.jpg',
-                                    title: 'Jungla Encantada',
-                                    description: 'Es un lugar fascinante, con pura naturaleza donde los chicos disfrutan recorriendo sus curvos caminitos y puentecitos, sumergiéndose en un mundo lleno de fantasías y aventuras. Los chicos no dejan de sorprenderse al recorrer todos y cada uno de los rincones únicos e incomparables, por su encanto y singular belleza.'
-                                },
-                                {
-                                    id: 2,
-                                    image: '/images/Atracciones/pueblo-2.jpg',
-                                    title: 'Pueblo Indígena',
-                                    description: 'Nuevo sector temático recreado y ambientado en nuestros pueblos originarios con estructuras de cañas y maderas revestidas en telas. Los chicos reviven la cultura y forma de vida de aquellos pueblos al realizar actividades como recolectar frutas y verduras, cocinar en el fogón y proteger al pueblo y sus habitantes del ataque de animales.'
-                                },
-                                {
-                                    id: 3,
-                                    image: '/images/Atracciones/soga-1.jpg',
-                                    title: 'La Soga de Tarzán',
-                                    description: 'La Soga de Tarzán es una gran atracción para los chicos, en la cual ellos sienten la misma sensación de volar como Tarzán, en altura y entre los árboles. La soga de Tarzán es un juego apto para los fans de las emociones y la adrenalina.'
-                                },
-                                {
-                                    id: 4,
-                                    image: '/images/Atracciones/futbol-3.jpg',
-                                    title: 'Cancha de Fútbol',
-                                    description: 'Tanto varones como nenas se divierten jugando al Fútbol, Handball, Quemado y divertidos juegos de competencia por premios. Happy Park es el lugar ideal, donde la destreza de los chicos se pone en acción.'
-                                },
-                                {
-                                    id: 5,
-                                    image: '/images/Atracciones/casita-5.jpg',
-                                    title: 'Casita Laberinto',
-                                    description: 'En ella el tiempo no tiene fronteras y los chicos la disfrutan recorriendo sus laberintos y rincones, saludando a sus padres desde los balcones, para luego volver una y otra vez a recorrerla o bien crear en ella historias en un mundo de fantasías.'
-                                },
-                                {
-                                    id: 6,
-                                    image: '/images/Atracciones/casita-2.jpg',
-                                    title: 'Castillo Inflable',
-                                    description: 'El Castillo Inflable fue realizado a medida, buscando una combinación de colores divertidos. El tobogán de acceso a la puertita de entrada es mucho más amplio y con suficientes bordes laterales, para optimizar al máximo la seguridad de los chicos.'
-                                },
-                                {
-                                    id: 7,
-                                    image: '/images/Atracciones/plaza-5.jpg',
-                                    title: 'Plaza Happy Park',
-                                    description: 'Por una arcada de troncos se entra a "La Plaza Happy Park", un lugar encantador pensado para el buen esparcimiento de los chicos. En este sector los chicos descubren un atractivo espacio en el cual se encuentran instalados juegos como: Hamacas, Toboganes, Trepadora y Calesitas.'
-                                }
-
-                            ],
-                            init() {
-                                this.updateVisibleSlides();
-                                window.addEventListener('resize', () => {
-                                    this.updateVisibleSlides();
-                                });
-                            },
-                            updateVisibleSlides() {
-                                if (window.innerWidth < 768) {
-                                    this.visibleSlides = 1;
-                                    this.slidePercentage = 100;
-                                } else {
-                                    this.visibleSlides = 3;
-                                    this.slidePercentage = 100 / 3;
-                                }
-                            },
-                            next() {
-                                if (this.currentSlide < this.slides.length - this.visibleSlides) {
-                                    this.currentSlide += 1;
-                                }
-                            },
-                            prev() {
-                                if (this.currentSlide > 0) {
-                                    this.currentSlide -= 1;
-                                }
-                            },
-                            goTo(index) {
-                                if (index <= this.slides.length - this.visibleSlides) {
-                                    this.currentSlide = index;
-                                } else {
-                                    this.currentSlide = this.slides.length - this.visibleSlides;
-                                }
-                            },
-                            handleImageError(slide) {
-                                // Fallback obrázok ak sa pôvodný nepodarí načítať
-                                slide.image = 'https://picsum.photos/id/20/800/600';
-                            }
-                        }
-                    }
-                </script>
             </section>
         </div>
 
 
 
-        <section id="games" class="mb-20 animate-fade-in-up" style="animation-delay: 0.4s;">
+        <section id="games" class="mb-20 animate-fade-in-up anim-delay-04">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4">Juegos Recreativos</h2>
@@ -425,14 +330,11 @@
             </div>
         </section>
 
-        <section id="activities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.5s;">
+        <section id="activities" class="mb-20 animate-fade-in-up anim-delay-05">
             <!--https://tailwindflex.com/@perky98/product-carousel-with-tailwind-css-swiper-alpine-js -->
             <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-            <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
             <section class="max-w-6xl mx-auto px-4 py-0">
                 <div class="text-center mb-8">
@@ -500,97 +402,9 @@
                 </div>
             </section>
 
-            <script>
-                function productCarousel() {
-                    return {
-                        swiper: null,
-
-                        // ✅ Produkty (vygenerované demo)
-                        products: [],
-
-                        init() {
-                            this.products = this.makeProducts();
-
-                            this.swiper = new Swiper(this.$refs.swiperEl, {
-                                loop: true,
-                                speed: 450,
-                                spaceBetween: 20,
-                                autoplay: {
-                                    delay: 4200,
-                                    disableOnInteraction: false,
-                                },
-                                breakpoints: {
-                                    0: { slidesPerView: 1 },
-                                    768: { slidesPerView: 2 },
-                                    1024: { slidesPerView: 3 },
-                                },
-                            });
-                        },
-
-                        prev() { this.swiper?.slidePrev(); },
-                        next() { this.swiper?.slideNext(); },
-
-                        // --- “Generovanie” produktov + obrázkov (SVG data URI) ---
-                        makeProducts() {
-                            const items = [
-                                { id: 1, title: "Actividades Temáticas", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/smart-notes" },
-                                { id: 2, title: "Maquillaje Artístico", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/desk-organizer" },
-                                { id: 3, title: "Competencias", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/travel-pack" },
-                                { id: 4, title: "Kermesse", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/focus-timer" },
-                                { id: 5, title: "Zancos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/cloud-backup" },
-                                { id: 6, title: "Disfraces", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/cloud-backup" },
-                            ];
-
-                            // 6 rôznych “color themes”
-                            const colors = [
-                                ["#0ea5e9", "#1d4ed8"],
-                                ["#8b5cf6", "#1d4ed8"],
-                                ["#22c55e", "#0ea5e9"],
-                                ["#f97316", "#ef4444"],
-                                ["#14b8a6", "#0ea5e9"],
-                                ["#e11d48", "#8b5cf6"],
-                            ];
-
-                            return items.map((it, idx) => ({
-                                ...it,
-                                image: this.svgDataUrl(it.title, colors[idx][0], colors[idx][1]),
-                            }));
-                        },
-
-                        svgDataUrl(title, c1, c2) {
-                            const safeTitle = (title || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                            const svg = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="${c1}"/>
-                <stop offset="1" stop-color="${c2}"/>
-              </linearGradient>
-              <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.25"/>
-              </filter>
-            </defs>
-            <rect width="800" height="400" fill="url(#g)"/>
-            <circle cx="640" cy="120" r="80" fill="rgba(255,255,255,0.18)"/>
-            <circle cx="140" cy="300" r="120" fill="rgba(255,255,255,0.14)"/>
-            <rect x="90" y="90" width="620" height="220" rx="28" fill="rgba(255,255,255,0.16)" filter="url(#s)"/>
-            <text x="140" y="200" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
-                  font-size="44" font-weight="800" fill="white">${safeTitle}</text>
-            <text x="140" y="248" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
-                  font-size="22" font-weight="600" fill="rgba(255,255,255,0.85)"></text>
-          </svg>
-        `.trim();
-
-                            // encode pre data URI
-                            return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
-                        },
-                    }
-                }
-            </script>
-
         </section>
 
-        <section id="facilities" class="mb-20 animate-fade-in-up" style="animation-delay: 0.6s;">
+        <section id="facilities" class="mb-20 animate-fade-in-up anim-delay-06">
             <div class="h-full w-full bg-gray-800 pt-12 p-4">
                 <h2 class="text-3xl font-bold mb-8 text-white text-center pb-8">Seguridad</h2>
                 <div class="grid gap-14 md:grid-cols-3 md:gap-5">
@@ -637,7 +451,7 @@
             </div>
         </section>
 
-        <section id="services" class="mb-20 animate-fade-in-up" style="animation-delay: 0.7s;">
+        <section id="services" class="mb-20 animate-fade-in-up anim-delay-07">
             <h2 class="text-3xl font-bold text-center">Servicios</h2>
             <section class="py-10" id="services">
     <div class="container mx-auto px-4">
@@ -736,15 +550,14 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
 </section>
         </section>
 
-        <section id="prices" class="mb-20 animate-fade-in-up" style="animation-delay: 0.8s;">
-            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-            
+        <section id="prices" class="mb-20 animate-fade-in-up anim-delay-08">
+
 <div class="bg-gray-100">
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold mb-8 text-center">Visitas Destacadas</h2>
         
         <div 
-            x-data="carousel()"
+            x-data="visitsCarousel()"
             x-cloak
             class="relative"
         >
@@ -807,140 +620,6 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
             </div>
         </div>
     </div>
-
-    <script>
-        function carousel() {
-            return {
-                currentSlide: 0,
-                visibleSlides: 1,
-                slidePercentage: 100,
-                slides: [
-                    { 
-                        id: 1, 
-                        image: '/images/Visitas/gonzalo_heredia.jpg', 
-                        title: 'Gonzalo Heredia', 
-                        description: 'Actor de cine y televisión' 
-                    },
-                    { 
-                        id: 2, 
-                        image: '/images/Visitas/victoria_onetto.jpg', 
-                        title: 'Victoria Onetto', 
-                        description: 'Actriz de cine y televisión' 
-                    },
-                    { 
-                        id: 3, 
-                        image: '/images/Visitas/martin_ciccioli.jpg', 
-                        title: 'Martín Ciccioli', 
-                        description: 'Periodista Argentino' 
-                    },
-                    { 
-                        id: 4, 
-                        image: '/images/Visitas/paola_prenat_y_marcelo_iribarne.jpg', 
-                        title: 'Paola Prenat y Marcelo Iribarne', 
-                        description: 'Conductores de Televisión' 
-                    },
-                    { 
-                        id: 5, 
-                        image: '/images/Visitas/cinthia_fernandez_y_matias_defederico.jpg', 
-                        title: 'Cinthia Fernandez y Matías Defederico', 
-                        description: 'Modelo y panelista de televisión / exfutbolista' 
-                    },
-                    { 
-                        id: 6, 
-                        image: '/images/Visitas/alejandra_darin.jpg', 
-                        title: 'Alejandra Darin', 
-                        description: 'Actriz de cine y televisión' 
-                    }
-                    ,
-                    { 
-                        id: 7, 
-                        image: '/images/Visitas/francisco_de_narvaez.jpg', 
-                        title: 'Francisco de Narváez', 
-                        description: 'Político y empresario argentino' 
-                    },
-                    { 
-                        id: 8, 
-                        image: '/images/Visitas/mariana_antoniale.jpg', 
-                        title: 'Mariana Antoniale', 
-                        description: 'Modelo Vedette'
-                    },
-                    { 
-                        id: 9, 
-                        image: '/images/Visitas/thelma_biral_y_alberto_fernandez_de_rosa.jpg', 
-                        title: 'Thelma Biral y Alberto F. de Rosa', 
-                        description: 'Actriz y Actor de cine, teatro y televisión'
-                    },
-                    { 
-                        id: 10, 
-                        image: '/images/Visitas/jimena_campisi_y_virginia_gallardo.jpg', 
-                        title: 'Jimena Campisi y Virginia Gallardo', 
-                        description: 'Modelo y Actriz / Modelo, vedette, bailarina'
-                    },
-                    { 
-                        id: 11, 
-                        image: '/images/Visitas/jorge_suarez.jpg', 
-                        title: 'Jorge Suárez', 
-                        description: 'Actor y Docente Teatral'
-                    },
-                    { 
-                        id: 12, 
-                        image: '/images/Visitas/gisela_bernal.jpg', 
-                        title: 'Gisela Bernal', 
-                        description: 'Bailarina y Actriz'
-                    },
-                    { 
-                        id: 13, 
-                        image: '/images/Visitas/beto_alonso.jpg', 
-                        title: 'Beto Alonso', 
-                        description: 'ExFutbolista'
-                    },
-                    { 
-                        id: 14, 
-                        image: '/images/Visitas/sergio_gonal.jpg', 
-                        title: 'Sergio Gonal', 
-                        description: 'Actor Humorista'
-                    }
-                    
-                ],
-                init() {
-                    this.updateVisibleSlides();
-                    window.addEventListener('resize', () => {
-                        this.updateVisibleSlides();
-                    });
-                },
-                updateVisibleSlides() {
-                    if (window.innerWidth < 768) {
-                        this.visibleSlides = 1;
-                        this.slidePercentage = 100;
-                    } else {
-                        this.visibleSlides = 3;
-                        this.slidePercentage = 100 / 3;
-                    }
-                },
-                next() {
-                    if (this.currentSlide < this.slides.length - this.visibleSlides) {
-                        this.currentSlide += 1;
-                    }
-                },
-                prev() {
-                    if (this.currentSlide > 0) {
-                        this.currentSlide -= 1;
-                    }
-                },
-                goTo(index) {
-                    if (index <= this.slides.length - this.visibleSlides) {
-                        this.currentSlide = index;
-                    } else {
-                        this.currentSlide = this.slides.length - this.visibleSlides;
-                    }
-                },
-                handleImageError(slide) {
-                    // Fallback obrázok ak sa pôvodný nepodarí načítať
-                    slide.image = 'https://picsum.photos/id/20/800/600';
-                }
-            }
-        }
-    </script>
 </div>
 
 
@@ -949,61 +628,6 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
         </section>
         <div class="flex justify-center mt-8 space-x-2" id="indicators"></div>
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const track = document.getElementById('track');
-                const nextBtn = document.getElementById('nextBtn');
-                const prevBtn = document.getElementById('prevBtn');
-                const dotsContainer = document.getElementById('indicators');
-                const container = document.getElementById('carousel-container');
-
-                let index = 0;
-                const items = track.children;
-                const itemsPerView = window.innerWidth >= 768 ? 3 : 1;
-                const maxIndex = items.length - itemsPerView;
-                let autoPlayInterval;
-
-                // Generar Puntos
-                for (let i = 0; i <= maxIndex; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = `h-3 rounded-full transition-all duration-300 ${i === 0 ? 'bg-blue-900 w-8' : 'bg-gray-300 w-3'}`;
-                    dot.addEventListener('click', () => { index = i; updateCarousel(); });
-                    dotsContainer.appendChild(dot);
-                }
-                const dots = dotsContainer.children;
-
-                function updateCarousel() {
-                    track.style.transform = `translateX(-${(index * 100) / itemsPerView}%)`;
-                    Array.from(dots).forEach((dot, i) => {
-                        dot.className = `h-3 rounded-full transition-all duration-300 ${i === index ? 'bg-blue-900 w-8' : 'bg-gray-300 w-3'}`;
-                    });
-                }
-
-                function nextSlide() {
-                    index = index < maxIndex ? index + 1 : 0;
-                    updateCarousel();
-                }
-
-                function prevSlide() {
-                    index = index > 0 ? index - 1 : maxIndex;
-                    updateCarousel();
-                }
-
-                // Eventos
-                nextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
-                prevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
-
-                // Autoplay y Pausa
-                function startTimer() { autoPlayInterval = setInterval(nextSlide, 4000); }
-                function resetTimer() { clearInterval(autoPlayInterval); startTimer(); }
-                container.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-                container.addEventListener('mouseleave', startTimer);
-
-                startTimer();
-                window.addEventListener('resize', () => location.reload());
-            });
-        </script>
         </section>
 
 
@@ -1088,7 +712,7 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
                         </h2>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8192193484355!2d-58.4968676!3d-34.5215555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb130f39d902b%3A0x835ab45b7d750c63!2sHappy%20Park!5e0!3m2!1ses!2sar!4v1708876800000"
-                            width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            width="100%" height="450" class="contact-map-frame" allowfullscreen=""
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -1108,79 +732,13 @@ Nuestro objetivo es garantizar una experiencia cómoda y agradable para los asis
         </div>
     </footer>
 
-    <script>
-        // Alternar menú móvil
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
-
-        if (menuToggle && mobileMenu) {
-            mobileMenu.classList.add('hidden');
-
-            menuToggle.addEventListener('click', () => {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden');
-
-                if (isHidden) {
-                    mobileMenuItems.forEach((item, index) => {
-                        item.style.animation = 'none';
-                        setTimeout(() => {
-                            item.style.animation = 'slideUp 0.5s ease-out forwards';
-                            item.style.animationDelay = `${index * 0.1}s`;
-                        }, 10);
-                    });
-                }
-            });
-        }
-
-        // Desplazamiento suave para enlaces de navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            const targetSelector = anchor.getAttribute('href');
-            const target = targetSelector ? document.querySelector(targetSelector) : null;
-            if (!target) return;
-
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Animar barras de habilidades al hacer scroll
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-bar');
-            skillBars.forEach(bar => {
-                if (!bar.parentElement || !bar.parentElement.previousElementSibling) return;
-                const label = bar.parentElement.previousElementSibling.lastElementChild;
-                if (!label) return;
-                const targetWidth = label.textContent;
-                bar.style.width = targetWidth;
-            });
-        }
-
-        // Activar animación de barras cuando la sección de habilidades esté visible
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    animateSkillBars();
-                    observer.unobserve(skillsSection);
-                }
-            }, { threshold: 0.5 });
-
-            observer.observe(skillsSection);
-        }
-
-        // Envío del formulario (solo si existe)
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('¡Formulario enviado! (Reemplaza esto con tu propia lógica)');
-                form.reset();
-            });
-        }
-    </script>
-    <script src="/js/home.js" type="text/javascript"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/attractions-carousel.js"></script>
+    <script src="/js/activities-product-carousel.js"></script>
+    <script src="/js/visits-carousel.js"></script>
+    <script src="/js/visits-legacy-carousel.js"></script>
+    <script src="/js/home.js" type="text/javascript"></script>
 </body>
 
 </html>

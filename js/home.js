@@ -112,3 +112,67 @@ function heroSlider() {
                         }
                     }
                 }
+
+
+// Alternar menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+
+        if (menuToggle && mobileMenu) {
+            mobileMenu.classList.add('hidden');
+
+            menuToggle.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+
+                if (isHidden) {
+                    mobileMenuItems.forEach((item, index) => {
+                        item.style.animation = 'none';
+                        setTimeout(() => {
+                            item.style.animation = 'slideUp 0.5s ease-out forwards';
+                            item.style.animationDelay = `${index * 0.1}s`;
+                        }, 10);
+                    });
+                }
+            });
+        }
+
+        // Desplazamiento suave para enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            const targetSelector = anchor.getAttribute('href');
+            const target = targetSelector ? document.querySelector(targetSelector) : null;
+            if (!target) return;
+
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Animar barras de habilidades al hacer scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                if (!bar.parentElement || !bar.parentElement.previousElementSibling) return;
+                const label = bar.parentElement.previousElementSibling.lastElementChild;
+                if (!label) return;
+                const targetWidth = label.textContent;
+                bar.style.width = targetWidth;
+            });
+        }
+
+        // Activar animación de barras cuando la sección de habilidades esté visible
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(skillsSection);
+                }
+            }, { threshold: 0.5 });
+
+            observer.observe(skillsSection);
+        }
+
+        
