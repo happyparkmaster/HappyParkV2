@@ -34,3 +34,14 @@
     border: 0;
     border-radius: 8px;
 }
+.carousel {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
