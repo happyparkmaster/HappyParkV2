@@ -27,12 +27,12 @@ function productCarousel() {
 
         makeProducts() {
             const items = [
-                { id: 1, title: "Actividades Temáticas", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/smart-notes" },
-                { id: 2, title: "Maquillaje Artístico", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/desk-organizer" },
-                { id: 3, title: "Competencias", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/travel-pack" },
-                { id: 4, title: "Kermesse", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/focus-timer" },
-                { id: 5, title: "Zancos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/cloud-backup" },
-                { id: 6, title: "Disfraces", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut", link: "/products/cloud-backup" },
+                { id: 1, title: "Actividades Temáticas", description: "Momentos llenos de magia, imaginación y aventura para que cada invitado viva una historia inolvidable.", link: "#" },
+                { id: 2, title: "Maquillaje Artístico", description: "Transformaciones divertidas y coloridas que dejan a los chicos con la mejor expresión de su personaje favorito.", link: "#" },
+                { id: 3, title: "Competencias", description: "Desafíos emocionantes, premios y mucha energía para compartir risas y diversión en equipo.", link: "#" },
+                { id: 4, title: "Kermesse", description: "Un espacio de juegos, premios y alegría donde cada participante se siente protagonista del festejo.", link: "#" },
+                { id: 5, title: "Zancos", description: "Una experiencia divertida y original para mover el cuerpo, reírse y probar algo diferente con total seguridad.", link: "#" },
+                { id: 6, title: "Disfraces", description: "La mejor manera de dejar volar la imaginación y convertir cada celebración en una fiesta inolvidable.", link: "#" },
             ];
 
             const colors = [
