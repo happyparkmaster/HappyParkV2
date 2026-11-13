@@ -29,7 +29,9 @@ function attractionsCarousel() {
                     '/images/Atracciones/jungla-1.jpg',
                     '/images/Atracciones/jungla-2.jpg',
                     '/images/Atracciones/jungla-3.jpg',
-                    '/images/Atracciones/jungla-5.jpg'
+                    '/images/Atracciones/jungla-4.jpg',
+                    '/images/Atracciones/jungla-5.jpg',
+                    '/images/Atracciones/jungla-6.jpg'
                 ],
                 title: 'Jungla Encantada',
                 description: 'Es un lugar fascinante, con pura naturaleza donde los chicos disfrutan recorriendo sus curvos caminitos y puentecitos, sumergiéndose en un mundo lleno de fantasías y aventuras. Los chicos no dejan de sorprenderse al recorrer todos y cada uno de los rincones únicos e incomparables, por su encanto y singular belleza.'

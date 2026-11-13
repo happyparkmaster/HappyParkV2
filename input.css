@@ -85,14 +85,14 @@ h6 {
 .menu-activities { color: #FFB74D; }
 .menu-activities:hover { color: #FFA726; }
 
-.menu-facilities { color: #E91E8C; }
-.menu-facilities:hover { color: #C71B7A; }
+.menu-security { color: #E91E8C; }
+.menu-security:hover { color: #C71B7A; }
 
 .menu-services { color: #1E90FF; }
 .menu-services:hover { color: #1873CC; }
 
-.menu-prices { color: #FF6B6B; }
-.menu-prices:hover { color: #FF5252; }
+.menu-visitors { color: #FF6B6B; }
+.menu-visitors:hover { color: #FF5252; }
 
 .menu-contact { color: #95B8A1; }
 .menu-contact:hover { color: #7FA392; }
